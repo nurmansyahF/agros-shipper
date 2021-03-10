@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="theme-color" content="#4C9F70"/>
+    <title>Agros Shipper</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="styles/plugins.css"/>
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="header" id="header">
+        <div class="container"><a class="header__logo" href="home.html"><img class="img" src="images/logo-agros.png"/><img class="img-alt" src="images/logo-agros-alt.png"/><span class="text">SHIPPER</span></a>
+          <div class="header__menu">
+            <ul>
+              <li class="btn-home"><a href="#"><i class="icon">
+                    <div class="ic" style="background-image: url(images/ic-home.svg)"></div></i></a></li>
+              <li class="btn-notif"><a href="#"><span class="icon">
+                    <div class="ic" style="background-image: url(images/ic-notif.svg)"></div><i class="number">3</i></span></a></li>
+              <li class="btn-login"><a href="login.html">Logout</a></li>
+            </ul>
+          </div>
+          <div class="header__toggle"><span></span><span></span><span></span></div>
+        </div>
+      </header>
+      <main>
+        <div class="loading-page">
+          <div class="loading-page__wrap">
+            <div class="loading-page__logo">
+              <div class="icon"><img src="images/logo-icon.png"/></div>
+              <div class="text"><img src="images/logo-text.png"/></div>
+            </div>
+          </div><span class="foot-text">PT ANTAR GLOBAL PROSPERO</span>
+        </div>
+        <div class="block-dashboard">
+          <section class="inner-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7 animate animate--up">
+                  <h1>Tambah Purchase Orders</h1>
+                </div>
+                <div class="col-lg-5 animate animate--up">
+                  <div class="search">
+                    <form>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ..."/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="breadcrubms animate animate--up">
+                <u>NAVIGATION :</u><a href="#">Homepage</a><a href="#">Dashboard</a><span>FORM PURCHASE ORDER</span>
+              </div>
+            </div>
+          </section>
+          <section class="po-and-features">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box-card animate animate--up">
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-user-accnt.png)"></div>
+                    </div><a class="ext-link" href="#" target="_blank"></a>
+                    <h3>KEMBALI KE MENU UTAMA</h3>
+                    <div class="text">
+                      <p>Kembali ke menu utama untuk <br>melihat ringkasan.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box-card gradient-green animate animate--up" style="background-image: url(images/box-bg-pattern-green.png)">
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-box-add.png)"></div>
+                    </div><a class="ext-link" href="#" target="_blank"></a>
+                    <h3>TAMBAH <br>PURCHASE ORDER</h3>
+                    <div class="text">
+                      <p>Purchase order dapat dilakukan <br>dalam Agros Shipper</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="box-card light-green animate animate--up">
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-check.png)"></div>
+                    </div>
+                    <h4><b>PO</b> Aktif</h4>
+                    <div class="text">
+                      <p>Purchase order yang <b>belum berjalan</b>.</p>
+                    </div>
+                    <div class="total"><span>10</span></div>
+                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="box-card cream animate animate--up">
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-file.png)"></div>
+                    </div>
+                    <h4><b>PO</b> Aktif</h4>
+                    <div class="text">
+                      <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                    </div>
+                    <div class="total"><span>2</span></div>
+                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="po-form">
+            <div class="container">
+              <div class="section__head animate animate--up">
+                <h2>Form Purchase Order</h2>
+                <p>Form yang perlu Anda isi untuk</p>
+              </div>
+              <div class="form-wrapper sform">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Nama Barang"/>
+                      </div>
+                      <div class="form-group">
+                        <select class="select-control" title="Jenis Barang">
+                          <option value="">Barang 1</option>
+                          <option value="">Barang 2</option>
+                          <option value="">Barang 3</option>
+                          <option value="">Barang 4</option>
+                          <option value="">Barang 5</option>
+                          <option value="">Barang 6</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <select class="select-control" title="Satuan Muatan">
+                          <option value="">Kg</option>
+                          <option value="">Ton</option>
+                          <option value="">Kwintal</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="select-control" title="Jumlah Barang">
+                          <option value="">100</option>
+                          <option value="">200</option>
+                          <option value="">300</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12 divider"></div>
+                    <div class="col-md-6">
+                      <p>Pilih jenis kendaraan yang Anda inginkan</p>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <select class="select-control" title="Jenis Kendaraan">
+                          <option value="">Dump Truck (35 TON / 25 M3)</option>
+                          <option value="">Dump Truck (35 TON / 25 M3)</option>
+                          <option value="">Dump Truck (35 TON / 25 M3)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12 divider"></div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Masukan Kota Asal Muat"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Masukan Alamat Muat"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Masukan Kota Bongkar"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Masukan Alamat Bongkar"/>
+                      </div>
+                    </div>
+                    <div class="col-md-12 divider"></div>
+                    <div class="col-md-6">
+                      <div class="box-map">
+                        <div class="map"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=tugu%20pahlawan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="box-map">
+                        <div class="map"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=tugu%20pahlawan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 divider"></div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Tanggal Muat DD/MM/YYY"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Nama PIC Muat"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Nomor Telepon"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Tanggal Muat DD/MM/YYY"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Nama PIC Bongkar"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Nomor Telepon"/>
+                      </div>
+                    </div>
+                    <div class="col-md-12 divider"></div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="Deskripsi Tambahan"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="Deskripsi Tambahan"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12 divider"></div>
+                    <div class="col-md-6">
+                      <div class="form-group border-green">
+                        <input class="form-control" type="text" placeholder="Ongkos Angkut"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group border-green">
+                        <input class="form-control" type="text" placeholder="Estimasi Ritase"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6 offset-md-6">
+                      <div class="form-action">
+                        <div class="btn-submit">
+                          <button class="btn" type="submit">Submit Pendaftaran</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="po-and-features">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="box-card animate animate--up">
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-envelope.png)"></div>
+                      <div class="floating-number">3</div>
+                    </div>
+                    <h4><b>Agros</b> Messenger</h4>
+                    <div class="text">
+                      <p>Interaksi eksklusif <b>1-ON-1</b> bersama Agros Sales / Admin sesuai dengan Office Hours.</p>
+                    </div>
+                    <div class="link-seemore"><a href="#"><b>MON - FRI</b> 09.00 - 17.00</a></div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="box-card animate animate--up">
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-coin.png)"></div>
+                      <div class="floating-number">3</div>
+                    </div>
+                    <h4><b>Agros</b> Transaction</h4>
+                    <div class="text">
+                      <p>Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda.</p>
+                    </div>
+                    <div class="link-seemore"><a href="#">Lihat Tagihan Anda</a></div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="poa__slider animate animate--up">
+                    <div class="slider-item">
+                      <div class="box-card row">
+                        <div class="col-md-6">
+                          <div class="icon">
+                            <div class="ic" style="background-image: url(images/ic-rect-message.png)"></div>
+                          </div>
+                          <h4><b>Kritik atau Saran?</b></h4>
+                          <div class="text">
+                            <p>Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.</p>
+                          </div>
+                          <div class="link-seemore"><a href="#"><b>Masukan Kritik atau Saran</b></a></div>
+                        </div>
+                        <div class="col-md-6"><img src="images/img-login.png" alt="img"/></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="box-card row">
+                        <div class="col-md-6">
+                          <div class="icon">
+                            <div class="ic" style="background-image: url(images/ic-rect-message.png)"></div>
+                          </div>
+                          <h4><b>Kritik atau Saran?</b></h4>
+                          <div class="text">
+                            <p>Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.</p>
+                          </div>
+                          <div class="link-seemore"><a href="#"><b>Masukan Kritik atau Saran</b></a></div>
+                        </div>
+                        <div class="col-md-6"><img src="images/img-login.png" alt="img"/></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="agros-service">
+            <div class="container">
+              <div class="section__head animate animate--up">
+                <h2>Layanan Agros</h2>
+                <p>Your Truly Logistics Solutions, Agros selalu memberi kemudahan dan kenyamanan untuk Anda.</p>
+                <div class="link-seemore"><a href="#">Homepage Kami</a></div>
+              </div>
+              <div class="service__slider animate animate--up">
+                <div class="slider-item dark" style="background-image: url(images/hero-driver.jpg)">
+                  <div class="content">
+                    <h4>AGROS DRIVER</h4>
+                    <p>Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.</p><a class="link" href="#">Kunjungi laman</a>
+                  </div>
+                </div>
+                <div class="slider-item" style="background-image: url(images/hero-home.jpg)">
+                  <div class="content">
+                    <h4>AGROS DRIVER</h4>
+                    <p>Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.</p><a class="link" href="#">Kunjungi laman</a>
+                  </div>
+                </div>
+                <div class="slider-item dark" style="background-image: url(images/hero-driver.jpg)">
+                  <div class="content">
+                    <h4>AGROS SHOP</h4>
+                    <p>Saat terjebak di jalan karena ada gangguan atau kerusakan, armada Agros yang tersebar di seluruh Indonesia akan kami sambungkan dengan bengkel Anda.</p><a class="link" href="#">Kunjungi laman</a>
+                  </div>
+                </div>
+                <div class="slider-item dark" style="background-image: url(images/hero-driver.jpg)">
+                  <div class="content">
+                    <h4>AGROS TRANSPORTER</h4>
+                    <p>Tidak ada yang tidak mungkin. Kini, Perusahaan bisa dengan cepat mendapatkan keuntungan tanpa harus melakukan hal berat.</p><a class="link" href="#">Kunjungi laman</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="po-history">
+            <div class="container">
+              <div class="section__head animate animate--up">
+                <h2>Riwayat Purchase Order</h2>
+                <p>Purchase order otomatis akan tersimpan dan terkumpul dalam halaman riwayat.</p>
+                <div class="link-seemore"><a href="#">Homepage Kami</a></div>
+              </div>
+              <div class="po-history__list">
+                <ul>
+                  <li class="animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="load"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="unload"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="load"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="unload"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="load"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="unload"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="load"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="unload"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="load"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                        <div class="unload"><span>PASIR CUCI</span><small>20.000 TON</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                  <div class="pagination-wrap animate animate--up">
+                    <u>Halaman</u>
+                    <ul class="pagination">
+                      <li class="active"><span>1</span></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li class="before"><a href="#">
+                          <div class="ic-arrow"></div></a></li>
+                      <li class="after"><a href="#">
+                          <div class="ic-arrow"></div></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer" id="footer">
+        <div class="footer-main animate animate--up">
+          <div class="container"></div>
+        </div>
+        <div class="footer-bot">
+          <div class="container">
+            <div class="footer-bot__left">
+              <div class="footer-bot__logo"><img src="images/logo-agros-w.png"/></div><span class="line"></span>
+              <div class="copy">PT ANTAR GLOBAL PROSPERO &copy; 2020. All rights reserved.</div>
+            </div>
+            <div class="footer-bot__right"><a href="#">SYARAT & KETENTUAN</a><a href="#">KEBIJAKAN PRIVASI</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="plugins/owl.carousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="plugins/lity/lity.min.js"></script>
+    <script src="plugins/autosize/autosize.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
