@@ -30,12 +30,20 @@
         </div>
       </header>
       <main>
+        <div class="loading-page">
+          <div class="loading-page__wrap">
+            <div class="loading-page__logo">
+              <div class="icon"><img src="images/logo-icon.png"/></div>
+              <div class="text"><img src="images/logo-text.png"/></div>
+            </div>
+          </div><span class="foot-text">PT ANTAR GLOBAL PROSPERO</span>
+        </div>
         <div class="block-dashboard">
           <section class="inner-header">
             <div class="container">
               <div class="row">
                 <div class="col-lg-7 animate animate--up">
-                  <h1>Ringkasan Purchase Order</h1>
+                  <h1>Delivery Order Sisa</h1>
                 </div>
                 <div class="col-lg-5 animate animate--up">
                   <div class="search">
@@ -54,7 +62,7 @@
           </section>
           <section class="your-do">
             <div class="container">
-              <div class="your-do__do-det animate animate--up">
+              <div class="your-do__do-det do-rest animate animate--up">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="box-po animate animate--up"><span class="small-title">Nomor Purchase Order</span>
@@ -192,80 +200,15 @@
             <div class="container">
               <div class="po-history__list">
                 <ul>
-                  <li class="sent animate animate--up"><a href="#">
+                  <li class="take animate animate--up"><a href="#">
                       <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
                       </div>
                       <div class="box-det">
                         <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
                         <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
                         <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>TERKIRIM</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="send animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-sent.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>DIKIRIM</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="send animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-sent.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>DIKIRIM</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="send animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-sent.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>DIKIRIM</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="sent animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>TERKIRIM</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="pending animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>PENDING</span><small>23/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
                       </div>
                       <div class="arrow">
                         <div class="ic-arrow"></div>
@@ -278,33 +221,7 @@
                         <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
                         <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
                         <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>AMBIL MUATAN</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="sent animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>TERKIRIM</span><small>23/12/2020</small></div>
-                      </div>
-                      <div class="arrow">
-                        <div class="ic-arrow"></div>
-                      </div></a></li>
-                  <li class="sent animate animate--up"><a href="#">
-                      <div class="icon-box">
-                        <div class="icon" style="background-image: url(images/ic-rect-check-green.png)"></div>
-                      </div>
-                      <div class="box-det">
-                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
-                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
-                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>TERKIRIM</span><small>23/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
                       </div>
                       <div class="arrow">
                         <div class="ic-arrow"></div>
@@ -317,7 +234,98 @@
                         <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
                         <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
                         <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
-                        <div class="unload"><span>AMBIL MUATAN</span><small>23/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
+                      </div>
+                      <div class="arrow">
+                        <div class="ic-arrow"></div>
+                      </div></a></li>
+                  <li class="take animate animate--up"><a href="#">
+                      <div class="icon-box">
+                        <div class="icon" style="background-image: url(images/ic-rect-take.png)"></div>
+                      </div>
+                      <div class="box-det">
+                        <div class="po-numb"><span>DO-AGRS-040221.79</span><small>22/12/2020</small></div>
+                        <div class="prdct-name"><span>GIPSUM</span><small>20.000 TON</small></div>
+                        <div class="load"><span>TUBAN</span><small>22/12/2020</small></div>
+                        <div class="unload"><span>PROSES MUAT</span><small>23/12/2020</small></div>
                       </div>
                       <div class="arrow">
                         <div class="ic-arrow"></div>
