@@ -335,7 +335,7 @@ body.link-transition #wrap main { transition: all 1s ease-in-out; }
 
 .floating-number { position: absolute; top: -7.5%; right: -7.5%; width: 15px; font-size: 10px; line-height: 15px; display: block; background: #DF5055; border-radius: 3px; text-align: center; color: #fff; }
 
-.link-seemore a, .link-seemore span { font-size: 12px; line-height: 16px; position: relative; vertical-align: middle; display: blocka; color: #4C9F70; }
+.link-seemore a, .link-seemore span { font-size: 12px; line-height: 16px; position: relative; vertical-align: middle; display: block; color: #4C9F70; }
 
 .link-seemore a:after, .link-seemore span:after { content: ""; display: inline-block; vertical-align: middle; width: 16px; height: 16px; background-color: #4C9F70; background-image: url(../images/ic-arrow-right-white.svg); background-size: 6px 5px; background-repeat: no-repeat; background-position: center; border-radius: 5px; margin-left: 8px; }
 
@@ -1372,13 +1372,19 @@ body.notif-open .notif-box { opacity: 1; visibility: visible; top: 115px; }
 
 .block-dashboard.bill-page { background-position: center; background-size: cover; background-repeat: no-repeat; min-height: calc(100vh - 100px); margin-top: 100px; padding-bottom: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
-.block-dashboard.bill-page .box-white { background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0px 3px 6px #00000029; text-align: center; }
+.block-dashboard.bill-page .box-white { background: #fff; padding: 80px; border-radius: 10px; box-shadow: 0px 3px 6px #00000029; position: relative; }
 
-.block-dashboard.bill-page .box-white .top .icon { background-position: center; background-size: cover; background-repeat: no-repeat; width: 80px; height: 80px; display: inline-block; border-radius: 50%; overflow: hidden; margin-bottom: 24px; }
+.block-dashboard.bill-page .box-white .logo-midtrans { width: 168px; height: 168px; position: absolute; top: 0; right: 88px; }
 
-.block-dashboard.bill-page .box-white .top h1 { font-size: 42px; line-height: 51px; font-weight: bold; margin-bottom: 10px; }
+.block-dashboard.bill-page .box-white .logo-midtrans img { display: block; width: 100%; height: 100%; }
 
-.block-dashboard.bill-page .box-white .top p { max-width: 320px; margin: 0 auto; font-size: 14px; line-height: 20px; }
+.block-dashboard.bill-page .box-white .top .icon { background-position: center; background-size: cover; background-repeat: no-repeat; width: 130px; height: 130px; display: inline-block; border-radius: 50%; overflow: hidden; margin-left: -23px; }
+
+.block-dashboard.bill-page .box-white .top .no-po { font-size: 18px; line-height: 18px; margin-bottom: 10px; }
+
+.block-dashboard.bill-page .box-white .top h1 { font-size: 42px; line-height: 51px; font-weight: bold; margin-bottom: 10px; color: #4C9F70; }
+
+.block-dashboard.bill-page .box-white .top p { max-width: 350px; font-size: 14px; line-height: 20px; }
 
 .block-dashboard.bill-page .box-white .top p + .text { margin-top: 45px; }
 
@@ -1401,6 +1407,18 @@ body.notif-open .notif-box { opacity: 1; visibility: visible; top: 115px; }
 .block-dashboard.bill-page .box-white .bottom .box-btn a span { display: inline-block; vertical-align: middle; padding: 0 28px; }
 
 .block-dashboard.bill-page .box-white .bottom .box-btn a i { width: 40px; height: 40px; display: inline-block; vertical-align: middle; background-color: #4C9F70; border-radius: 0 5px 5px 0; background-image: url(../images/ic-arrow-right-white.svg); background-size: 14px 12px; background-repeat: no-repeat; background-position: center; }
+
+.block-dashboard.bill-page .box-white .bottom .show-notif span { display: block; font-size: 14px; line-height: 16px; color: #777777; margin-bottom: 15px; }
+
+.block-dashboard.bill-page .box-white .bottom .show-notif .link-seemore a { font-size: 22px; line-height: 22px; color: #000000; }
+
+.block-dashboard.bill-page .box-white .bottom .block .label { font-size: 14px; line-height: 16px; margin-bottom: 15px; color: #777777; }
+
+.block-dashboard.bill-page .box-white .bottom .block b { font-size: 22px; line-height: 22px; }
+
+.block-dashboard.bill-page .box-white .bottom .block.time { padding-left: 45px; }
+
+.block-dashboard.bill-page .box-white .bottom .block.time b { color: #4C9F70; }
 
 .block-dashboard .messages-list { margin: 40px 0 80px; }
 
