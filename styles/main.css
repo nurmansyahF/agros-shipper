@@ -1380,6 +1380,8 @@ body.notif-open .notif-box { opacity: 1; visibility: visible; top: 115px; }
 
 .block-dashboard .po-history__list ul li .box-det { -webkit-flex: 0 0 calc(100% - 140px); -ms-flex: 0 0 calc(100% - 140px); flex: 0 0 calc(100% - 140px); max-width: calc(100% - 140px); display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
+.block-dashboard .po-history__list ul li .box-det.mobile { display: none; }
+
 .block-dashboard .po-history__list ul li .po-numb, .block-dashboard .po-history__list ul li .prdct-name, .block-dashboard .po-history__list ul li .load, .block-dashboard .po-history__list ul li .unload { padding: 0 16px; border-right: 1px solid #CACACA; }
 
 .block-dashboard .po-history__list ul li .po-numb span, .block-dashboard .po-history__list ul li .prdct-name span, .block-dashboard .po-history__list ul li .load span, .block-dashboard .po-history__list ul li .unload span { font-size: 16px; line-height: 20px; font-weight: bold; display: block; }
