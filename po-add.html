@@ -102,9 +102,9 @@
                   <div class="icon-box">
                     <div class="icon" style="background-image: url(images/ic-menu-mobile-01.svg)"></div>
                   </div><span>Home</span></a></li>
-              <li><a href="#">
+              <li class="current-page"><a href="#">
                   <div class="icon-box">
-                    <div class="icon" style="background-image: url(images/ic-menu-mobile-02.svg)"></div>
+                    <div class="icon" style="background-image: url(images/ic-menu-mobile-active-02.svg)"></div>
                   </div><span>Order</span></a></li>
               <li><a href="#">
                   <div class="icon-box">
@@ -115,14 +115,6 @@
         </div>
       </header>
       <main>
-        <div class="loading-page">
-          <div class="loading-page__wrap">
-            <div class="loading-page__logo">
-              <div class="icon"><img src="images/logo-icon.png"/></div>
-              <div class="text"><img src="images/logo-text.png"/></div>
-            </div>
-          </div><span class="foot-text">PT ANTAR GLOBAL PROSPERO</span>
-        </div>
         <div class="block-dashboard">
           <section class="inner-header">
             <div class="container">
@@ -199,7 +191,7 @@
               </div>
             </div>
           </section>
-          <section class="po-form">
+          <section class="po-form hide-mobile">
             <div class="container">
               <div class="section__head animate animate--up">
                 <h2>Form Purchase Order</h2>
@@ -337,7 +329,111 @@
               </div>
             </div>
           </section>
-          <section class="po-and-features">
+          <section class="po-form show-mobile">
+            <div class="container">
+              <div class="section__head animate animate--up">
+                <h2>Form Purchase Order</h2>
+                <p>Pilih salah satu menu untuk mendapatkan informasi yang Anda inginkan terkait dengan muatan Anda.</p>
+              </div>
+              <form>
+                <div class="form-wrapper sform">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Nama Barang"/>
+                  </div>
+                  <div class="form-group">
+                    <select class="select-control" title="Jenis Barang">
+                      <option value="">Barang 1</option>
+                      <option value="">Barang 2</option>
+                      <option value="">Barang 3</option>
+                      <option value="">Barang 4</option>
+                      <option value="">Barang 5</option>
+                      <option value="">Barang 6</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select class="select-control" title="Satuan Muatan">
+                      <option value="">Kg</option>
+                      <option value="">Ton</option>
+                      <option value="">Kwintal</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select class="select-control" title="Jumlah Barang">
+                      <option value="">100</option>
+                      <option value="">200</option>
+                      <option value="">300</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-wrapper sform">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Masukan Kota Asal Muat"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Masukan Alamat Muat"/>
+                  </div>
+                  <div class="form-group">
+                    <div class="box-map">
+                      <div class="map"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=tugu%20pahlawan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Tanggal Muat DD/MM/YYY"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Nama PIC Muat"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Nomor Telepon"/>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Deskripsi Tambahan"></textarea>
+                  </div>
+                </div>
+                <div class="form-wrapper sform">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Masukan Kota Bongkar"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Masukan Alamat Bongkar"/>
+                  </div>
+                  <div class="form-group">
+                    <div class="box-map">
+                      <div class="map"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=tugu%20pahlawan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Tanggal Muat DD/MM/YYY"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Nama PIC Muat"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Nomor Telepon"/>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Deskripsi Tambahan"></textarea>
+                  </div>
+                </div>
+                <div class="form-wrapper sform">
+                  <div class="form-group border-green">
+                    <input class="form-control" type="text" placeholder="Ongkos Angkut"/>
+                  </div>
+                  <div class="form-group border-green">
+                    <input class="form-control" type="text" placeholder="Estimasi Ritase"/>
+                  </div>
+                  <div class="form-action">
+                    <div class="btn-submit">
+                      <button class="btn" type="submit">Submit Pendaftaran</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="po-and-features hide-mobile">
             <div class="container">
               <div class="row">
                 <div class="col-lg-3">
