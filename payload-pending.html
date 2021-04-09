@@ -26,7 +26,6 @@
               <li class="btn-notif"><a href="#"><span class="icon">
                     <div class="ic" style="background-image: url(images/ic-notif.svg)"></div><i class="number">3</i></span></a>
                 <div class="notif-box">
-                  <h3>Notifikasi</h3>
                   <div class="n-wrapper">
                     <div class="pertime"><span>Hari ini,</span><span class="t-notif"> 3 Notifikasi Baru</span></div>
                     <div class="notif-item">
@@ -172,7 +171,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-2">
+                  <div class="col-lg-2 hide-mobile">
                     <div class="box-card small sent light-green animate animate--up">
                       <div class="icon">
                         <div class="ic" style="background-image: url(images/ic-rect-check-send.png)"></div>
@@ -185,7 +184,7 @@
                       <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
                     </div>
                   </div>
-                  <div class="col-lg-2">
+                  <div class="col-lg-2 hide-mobile">
                     <div class="box-card small send light-blue animate animate--up">
                       <div class="icon">
                         <div class="ic" style="background-image: url(images/ic-rect-sent.png)"></div>
@@ -198,7 +197,7 @@
                       <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
                     </div>
                   </div>
-                  <div class="col-lg-2">
+                  <div class="col-lg-2 hide-mobile">
                     <div class="box-card small pending light-purple actived animate animate--up">
                       <div class="icon">
                         <div class="ic" style="background-image: url(images/ic-rect-pending.png)"></div>
@@ -211,11 +210,46 @@
                       <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
                     </div>
                   </div>
+                </div>
+                <div class="row can-swipe show-mobile">
+                  <div class="col-lg-4">
+                    <div class="box-card small sent light-green animate animate--up">
+                      <h4><b>Terkirim</b></h4>
+                      <div class="text">
+                        <p>Muatan Anda telah terbongkar di tujuan.</p>
+                      </div>
+                      <div class="total"><span>369</span></div>
+                      <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="box-card small send light-blue animate animate--up">
+                      <h4><b>Dikirim</b></h4>
+                      <div class="text">
+                        <p>Muatan Anda sedang dalam perjalanan.</p>
+                      </div>
+                      <div class="total"><span>200</span></div>
+                      <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 actived">
+                    <div class="box-card small pending light-purple actived animate animate--up">
+                      <h4><b>Tertunda</b></h4>
+                      <div class="text">
+                        <p>Muatan Anda mengalami keterlambatan.</p>
+                      </div>
+                      <div class="total"><span>4</span></div>
+                      <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-notif show-mobile">
+                  <p>Geser kiri dan kanan untuk melihat lebih banyak</p>
                 </div><a class="ext-link" href="#" target="_blank"></a>
               </div>
             </div>
           </section>
-          <section class="po-and-features">
+          <section class="po-and-features hide-mobile">
             <div class="container">
               <div class="row">
                 <div class="col-lg-3">
@@ -268,6 +302,66 @@
                       <p>Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda.</p>
                     </div>
                     <div class="link-seemore"><a href="#">Lihat Tagihan Anda</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="po-and-features show-mobile">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-2">
+                  <div class="box-card light-green bg-white animate animate--up"><a class="boxlink" href="#"></a>
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-check.png)"></div>
+                    </div>
+                    <h4><b>DO</b> Aktif</h4>
+                    <div class="text">
+                      <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                    </div>
+                    <div class="total"><span>10</span></div>
+                    <div class="link-seemore"><span href="#">Lihat lebih lanjut</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="box-card cream bg-white animate animate--up"><a class="boxlink" href="#"></a>
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-file.png)"></div>
+                    </div>
+                    <h4><b>DO</b> Sisa</h4>
+                    <div class="text">
+                      <p>Purchase order yang <b>belum berjalan</b>.</p>
+                    </div>
+                    <div class="total"><span>2</span></div>
+                    <div class="link-seemore"><span>Lihat lebih lanjut</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="box-card animate animate--up"><a class="boxlink" href="#"></a>
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-envelope.png)"></div>
+                      <div class="floating-number">3</div>
+                    </div>
+                    <h4><b>Agros</b> Messenger</h4>
+                    <div class="text">
+                      <p>Interaksi eksklusif <b>1-ON-1</b> bersama Agros Sales / Admin sesuai dengan Office Hours.</p>
+                    </div>
+                    <div class="link-seemore"><span><b>MON - FRI</b> 09.00 - 17.00</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-3 show-mobile">
+                  <div class="box-card animate animate--up"><a class="boxlink" href="#"></a>
+                    <div class="icon">
+                      <div class="ic" style="background-image: url(images/ic-rect-coin.png)"></div>
+                      <div class="floating-number">3</div>
+                    </div>
+                    <h4><b>Agros</b> Transaction</h4>
+                    <div class="text">
+                      <p>Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda.</p>
+                    </div>
+                    <div class="link-seemore"><span>Lihat Tagihan Anda</span></div>
                   </div>
                 </div>
               </div>
