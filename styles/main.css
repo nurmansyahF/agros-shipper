@@ -431,7 +431,7 @@ body.load-page #wrap { background: #f8f8f8; }
 
 .block-dashboard .box-card.sent.light-green.actived { background: #EFF8F1 !important; }
 
-.block-dashboard .box-card.send { background-color: #fff; }
+.block-dashboard .box-card.send { background-color: #f8f8f8; }
 
 .block-dashboard .box-card.send h4 { color: #517CA7; }
 
@@ -441,7 +441,7 @@ body.load-page #wrap { background: #f8f8f8; }
 
 .block-dashboard .box-card.send.light-blue.actived { background-color: #e5f8fc; }
 
-.block-dashboard .box-card.pending { background-color: #FFF; }
+.block-dashboard .box-card.pending { background-color: #f8f8f8; }
 
 .block-dashboard .box-card.pending h4 { color: #826FCE; }
 
@@ -1167,7 +1167,7 @@ body.notif-open .header.sticky .notif-box { top: 70px; }
 
 .block-dashboard .po-and-features .row + .row { margin-top: 20px; }
 
-.block-dashboard .po-and-features .poa__slider { border-radius: 10px; box-shadow: 0px 3px 6px #00000029; }
+.block-dashboard .po-and-features .poa__slider { border-radius: 10px; box-shadow: 0px 3px 6px #00000029; height: 100%; }
 
 .block-dashboard .po-and-features .poa__slider .owl-stage-outer { overflow: visible; overflow-x: hidden; overflow-y: hidden; }
 
