@@ -946,9 +946,12 @@
           }
         ]
       }
-      ])
+      ]);
+      $('[id*="anno-"]').each(function(){
+        $(this).addClass('animate--in');
+      })
       setTimeout(function() {
-        tour.show()
+        tour.show();
       }, 4800)
     </script>
   </body>
