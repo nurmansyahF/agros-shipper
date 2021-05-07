@@ -196,7 +196,7 @@
                   </div>
                 </div><a class="ext-link" href="#" target="_blank"></a>
               </div>
-              <div class="your-do__do-det animate animate--up"><a class="boxlink" href="#"></a>
+              <div class="your-do__do-det animate animate--up" id="anno-1"><a class="boxlink" href="#"></a>
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="box-po"><span class="small-title">Nomor Delivery Order</span>
@@ -299,7 +299,7 @@
                   </div>
                 </div>
               </div>
-              <div class="payment-list-wrap">
+              <div class="payment-list-wrap" id="anno-2">
                 <ul>
                   <li class="animate animate--up">
                     <div class="row">
@@ -585,6 +585,32 @@
     <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="plugins/lity/lity.min.js"></script>
     <script src="plugins/autosize/autosize.min.js"></script>
+    <script src="plugins/onboard-js/dist/anno.js"></script>
+    <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      var tour = new Anno([
+        {
+          target: '#anno-1',
+          position: 'center-top',
+          className: 'annoNotif',
+          content: "<h4><img src='images/ic-idr-nobox.svg'>Status Transaksi</h4><p>Tagihan Anda akan muncul disini.<br> <b style='color:#DF5055;';>Merah</b> adalah tanda Anda harus membayarnya dan Hijau berarti sudah melunasinya.</p>",
+          buttons: {
+            text:'Lanjut',
+          }
+        },{
+          target: '#anno-2',
+          position: 'center-top',
+          className: 'annoNotif top-left',
+          content: "<h4><img src='images/ic-idr-nobox.svg'>Sudah Terbayar</h4><p>Berikut ini adalah kumpulan bukti bahwa Anda telah membayar.</p>",
+          buttons: {
+            text:'Mengerti',
+          }
+        }
+      ])
+      setTimeout(function() {
+        tour.show()
+      }, 4700)
+    </script>
   </body>
 </html>

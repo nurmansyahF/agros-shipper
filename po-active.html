@@ -147,30 +147,34 @@
           <section class="po-and-features">
             <div class="container">
               <div class="row">
-                <div class="col-lg-2">
-                  <div class="box-card light-green animate animate--up">
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-check.png)"></div>
+                <div class="col-lg-4" id="anno-1">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="box-card light-green animate animate--up">
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-check.png)"></div>
+                        </div>
+                        <h4><b>PO</b> Aktif</h4>
+                        <div class="text">
+                          <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                        </div>
+                        <div class="total"><span>10</span></div>
+                        <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                      </div>
                     </div>
-                    <h4><b>PO</b> Aktif</h4>
-                    <div class="text">
-                      <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                    <div class="col-lg-6">
+                      <div class="box-card cream bg-white animate animate--up">
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-file.png)"></div>
+                        </div>
+                        <h4><b>PO</b> Sisa</h4>
+                        <div class="text">
+                          <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                        </div>
+                        <div class="total"><span>2</span></div>
+                        <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                      </div>
                     </div>
-                    <div class="total"><span>10</span></div>
-                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <div class="box-card cream bg-white animate animate--up">
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-file.png)"></div>
-                    </div>
-                    <h4><b>PO</b> Sisa</h4>
-                    <div class="text">
-                      <p>Purchase order yang <b>sedang berjalan</b>.</p>
-                    </div>
-                    <div class="total"><span>2</span></div>
-                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -198,7 +202,7 @@
           </section>
           <section class="your-do det-list">
             <div class="container">
-              <div class="your-do__do-det animate animate--up">
+              <div class="your-do__do-det animate animate--up" id="anno-2"><a class="box-link" href="#"></a>
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="box-po"><span class="small-title">Nomor Purchase Order</span>
@@ -520,6 +524,32 @@
     <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="plugins/lity/lity.min.js"></script>
     <script src="plugins/autosize/autosize.min.js"></script>
+    <script src="plugins/onboard-js/dist/anno.js"></script>
+    <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      var tour = new Anno([
+        {
+          target: '#anno-1',
+          position: 'center-right',
+          className: 'annoNotif',
+          content: "<h4><img src='images/ic-file-check-nobox.svg'>PO Aktif</h4><p>Anda berada dalam daftar <b style='color: #4C9F70;'>PO Aktif</b>, ditandai dengan tombol berwarna. Pilih salah satu untuk langsung menampilkan <br><b style='color: #4C9F70;'>PO Aktif</b> / <b style='color: #FFBB00;'>PO Sisa</b>.</p>",
+          buttons: {
+            text:'Lanjut',
+          }
+        },{
+          target: '#anno-2',
+          position: 'center-top',
+          className: 'annoNotif',
+          content: "<h4><img src='images/ic-file-check-nobox.svg'>Status PO dan DO.</h4><p>Menampilkan perkembangan pengiriman muatan Anda, dengan menampilkan DO yang sedang kami kirim dan DO yang belum terambil.</p>",
+          buttons: {
+            text:'Mengerti',
+          }
+        }
+      ])
+      setTimeout(function() {
+        tour.show()
+      }, 4700)
+    </script>
   </body>
 </html>

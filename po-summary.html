@@ -204,43 +204,47 @@
           <section class="po-and-features">
             <div class="container">
               <div class="row">
-                <div class="col-lg-2">
-                  <div class="box-card small sent bg-white animate animate--up">
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-check-send.png)"></div>
+                <div class="col-lg-6" id="anno-1">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="box-card small sent bg-white animate animate--up">
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-check-send.png)"></div>
+                        </div>
+                        <h4><b>Terkirim</b></h4>
+                        <div class="text">
+                          <p>Muatan Anda telah terbongkar di tujuan.</p>
+                        </div>
+                        <div class="total"><span>369</span></div>
+                        <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                      </div>
                     </div>
-                    <h4><b>Terkirim</b></h4>
-                    <div class="text">
-                      <p>Muatan Anda telah terbongkar di tujuan.</p>
+                    <div class="col-lg-4">
+                      <div class="box-card small send bg-white animate animate--up">
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-sent.png)"></div>
+                        </div>
+                        <h4><b>Dikirim</b></h4>
+                        <div class="text">
+                          <p>Muatan Anda sedang dalam perjalanan.</p>
+                        </div>
+                        <div class="total"><span>200</span></div>
+                        <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                      </div>
                     </div>
-                    <div class="total"><span>369</span></div>
-                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <div class="box-card small send bg-white animate animate--up">
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-sent.png)"></div>
+                    <div class="col-lg-4">
+                      <div class="box-card small pending bg-white animate animate--up">
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-pending.png)"></div>
+                        </div>
+                        <h4><b>Tertunda</b></h4>
+                        <div class="text">
+                          <p>Muatan Anda mengalami keterlambatan.</p>
+                        </div>
+                        <div class="total"><span>4</span></div>
+                        <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
+                      </div>
                     </div>
-                    <h4><b>Dikirim</b></h4>
-                    <div class="text">
-                      <p>Muatan Anda sedang dalam perjalanan.</p>
-                    </div>
-                    <div class="total"><span>200</span></div>
-                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <div class="box-card small pending bg-white animate animate--up">
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-pending.png)"></div>
-                    </div>
-                    <h4><b>Tertunda</b></h4>
-                    <div class="text">
-                      <p>Muatan Anda mengalami keterlambatan.</p>
-                    </div>
-                    <div class="total"><span>4</span></div>
-                    <div class="link-seemore"><a href="#">Lihat lebih lanjut</a></div>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -285,7 +289,7 @@
           </section>
           <section class="po-history">
             <div class="container">
-              <div class="po-history__list">
+              <div class="po-history__list" id="anno-2">
                 <ul>
                   <li class="sent animate animate--up"><a href="#">
                       <div class="icon-box">
@@ -551,6 +555,32 @@
     <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="plugins/lity/lity.min.js"></script>
     <script src="plugins/autosize/autosize.min.js"></script>
+    <script src="plugins/onboard-js/dist/anno.js"></script>
+    <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      var tour = new Anno([
+        {
+          target: '#anno-1',
+          position: 'center-right',
+          className: 'annoNotif',
+          content: "<h4><img src='images/ic-idr-nobox.svg'>Status Muatan</h4><p>Halaman ini akan menampilkan kegiatan yang berlangsung dari muatan Anda, menghitung yang <b style='color:#4C9F70'>Terkirim</b>, <b style='color: #517CA7;'>Dikirim</b> dan <b style='color:#826FCE;'>Tertunda</b>.</p>",
+          buttons: {
+            text:'Lanjut',
+          }
+        },{
+          target: '#anno-2',
+          position: 'center-top',
+          className: 'annoNotif',
+          content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Informasi DO</h4><p>Anda bisa pantau status muatan / DO di halaman ini dan klik salah satu untuk melihat surat jalan digital.</p>",
+          buttons: {
+            text:'Mengerti',
+          }
+        }
+      ])
+      setTimeout(function() {
+        tour.show()
+      }, 4700)
+    </script>
   </body>
 </html>

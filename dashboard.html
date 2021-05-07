@@ -163,7 +163,7 @@
                     <div class="contact"><a href="tel: +62313974550">+62 (31) 3974550</a><br><a href="mailto:antarglobalprospero@gmail.com">Antarglobalprospero@gmail.com</a></div><a class="ext-link" href="#" target="_blank"></a>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" id="anno-1">
                   <div class="box-card gradient-green animate animate--up" style="background-image: url(images/box-bg-pattern-green.png)"><a class="boxlink" href="#"></a>
                     <div class="icon">
                       <div class="ic" style="background-image: url(images/ic-box-add.png)"></div>
@@ -174,30 +174,34 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-2">
-                  <div class="box-card light-green animate animate--up"><a class="boxlink" href="#"></a>
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-check.png)"></div>
+                <div class="col-lg-4" id="anno-2">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="box-card light-green animate animate--up"><a class="boxlink" href="#"></a>
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-check.png)"></div>
+                        </div>
+                        <h4><b>PO</b> Aktif</h4>
+                        <div class="text">
+                          <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                        </div>
+                        <div class="total"><span>10</span></div>
+                        <div class="link-seemore"><span href="#">Lihat lebih lanjut</span></div>
+                      </div>
                     </div>
-                    <h4><b>PO</b> Aktif</h4>
-                    <div class="text">
-                      <p>Purchase order yang <b>sedang berjalan</b>.</p>
+                    <div class="col-lg-6">
+                      <div class="box-card cream animate animate--up"><a class="boxlink" href="#"></a>
+                        <div class="icon">
+                          <div class="ic" style="background-image: url(images/ic-rect-file.png)"></div>
+                        </div>
+                        <h4><b>PO</b> Sisa</h4>
+                        <div class="text">
+                          <p>Purchase order yang <b>belum berjalan</b>.</p>
+                        </div>
+                        <div class="total"><span>2</span></div>
+                        <div class="link-seemore"><span>Lihat lebih lanjut</span></div>
+                      </div>
                     </div>
-                    <div class="total"><span>10</span></div>
-                    <div class="link-seemore"><span href="#">Lihat lebih lanjut</span></div>
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <div class="box-card cream animate animate--up"><a class="boxlink" href="#"></a>
-                    <div class="icon">
-                      <div class="ic" style="background-image: url(images/ic-rect-file.png)"></div>
-                    </div>
-                    <h4><b>PO</b> Sisa</h4>
-                    <div class="text">
-                      <p>Purchase order yang <b>belum berjalan</b>.</p>
-                    </div>
-                    <div class="total"><span>2</span></div>
-                    <div class="link-seemore"><span>Lihat lebih lanjut</span></div>
                   </div>
                 </div>
               </div>
@@ -215,7 +219,7 @@
                     <div class="link-seemore"><span><b>MON - FRI</b> 09.00 - 17.00</span></div>
                   </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" id="anno-3">
                   <div class="box-card animate animate--up"><a class="boxlink" href="#"></a>
                     <div class="icon">
                       <div class="ic" style="background-image: url(images/ic-rect-coin.png)"></div>
@@ -282,7 +286,7 @@
                   </div>
                 </div>
               </div>
-              <div class="your-do__do-det animate animate--up"><a class="boxlink" href="#"></a>
+              <div class="your-do__do-det animate animate--up" id="anno-4"><a class="boxlink" href="#"></a>
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="box-po"><span class="small-title">Nomor Purchase Order</span>
@@ -337,7 +341,7 @@
               </div>
               <div class="your-do__payload animate animate--up">
                 <div class="row">
-                  <div class="col-lg-3">
+                  <div class="col-lg-3" id="anno-5">
                     <div class="box-tab">
                       <h3>Status Muatan
                         <div class="link-seemore show-mobile"><a href="#"></a></div>
@@ -722,7 +726,7 @@
                 <h2>Riwayat Purchase Order</h2>
                 <p>Purchase order otomatis akan tersimpan dan terkumpul dalam halaman riwayat.</p>
               </div>
-              <div class="po-history__list">
+              <div class="po-history__list" id="anno-6">
                 <ul>
                   <li class="animate animate--up"><a href="#">
                       <div class="icon-box">
@@ -856,6 +860,96 @@
     <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="plugins/lity/lity.min.js"></script>
     <script src="plugins/autosize/autosize.min.js"></script>
+    <script src="plugins/onboard-js/dist/anno.js"></script>
+    <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      var tour = new Anno([{
+        target: '#anno-1',
+        position: 'center-right',
+        className: 'annoNotif',
+        content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Tambah Purchase Order</h4><p>Anda dapat melakukan order melalui button ini dan isi formulir sesuai dengan kebutuhan Anda.</p>",
+        buttons: {
+          text:'Lanjut',
+          }
+      },{
+        target: '#anno-2',
+        position:'center-left',
+        className: 'annoNotif',
+        content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Status Purchase Order</h4><p>Jumlah Purchase Order Anda yang sudah dalam proses dan yang tertunda dari total pemesanan yang Anda miliki.</p>",
+        buttons: [
+          {
+            text: 'Jelajahi Fitur ?',
+            className: 'explore',
+            click: function(anno, evt){
+              window.open('po-active.html')
+            }
+          }, {
+            text: 'Lanjut'
+          }
+        ]
+      },{
+        target: '#anno-3',
+        position:'center-right',
+        className: 'annoNotif',
+        content: "<h4><img src='images/ic-idr-nobox.svg'>Status Transaksi</h4><p>Semua kegiatan transaksi akan berlangsung disini.</p>",
+        buttons: [
+          {
+            text: 'Jelajahi Fitur ?',
+            className: 'explore',
+            click: function(anno, evt){
+              window.open('agros-transaction.html')
+            }
+          }, {
+            text: 'Lanjut'
+          }
+        ]
+      },{
+        target: '#anno-4',
+        position:'bottom',
+        className: 'annoNotif bottom',
+        content: "<h4><img src='images/ic-file-nobox.svg'>Delivery Order Terbaru</h4><p>Anda bisa melihat langsung Delivery Order yang sedang berjalan atau yang sedang kami proses.</p>",
+        buttons: [
+          {
+            text: 'Jelajahi Fitur ?',
+            className: 'explore',
+            click: function(anno, evt){
+              window.open('po-summary.html')
+            }
+          }, {
+            text: 'Lanjut'
+          }
+        ]
+      },{
+        target: '#anno-5',
+        position:'right',
+        className: 'annoNotif right',
+        content: "<h4><img src='images/ic-location-nobox.svg'>Status Delivery Order</h4><p>Anda dapat melakukan order melalui button ini dan isi formulir sesuai dengan kebutuhan Anda.</p>",
+        buttons: [
+          {
+            text: 'Jelajahi Fitur ?',
+            className: 'explore',
+            click: function(anno, evt){
+              window.open('#')
+            }
+          }, {
+            text: 'Lanjut'
+          }
+        ]
+      },{
+        target: '#anno-6',
+        position:'center-bottom',
+        className: 'annoNotif right-bottom',
+        content: "<h4><img src='images/ic-location-nobox.svg'>Riwayat Purchase Order</h4><p>Pengarsipan secara pribadi dapat Anda lacak melalui riwayat pemesan ini.</p>",
+        buttons: [{
+            text: 'Mengerti'
+          }
+        ]
+      }
+      ])
+      setTimeout(function() {
+        tour.show()
+      }, 4800)
+    </script>
   </body>
 </html>
