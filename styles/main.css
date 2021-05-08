@@ -896,21 +896,19 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 .header__menu ul > li { display: block; position: relative; transition: all .3s ease-in-out; }
 
-.header__menu ul > li a { color: #000000; display: block; font-size: 12px; line-height: 18px; font-weight: 400; padding: 11px 20px; opacity: 1; transition: all .3s ease-in-out; }
+.header__menu ul > li a { color: #000000; display: block; font-size: 12px; line-height: 18px; font-weight: 400; padding: 11px 30px; opacity: 1; transition: all .3s ease-in-out; }
 
 .header__menu ul > li a:hover { color: #000000; opacity: 0.5; }
 
 .header__menu ul > li.btn-message, .header__menu ul > li.btn-home, .header__menu ul > li.btn-notif { border-right: 1px solid #CACACA; }
 
-.header__menu ul > li.btn-message a, .header__menu ul > li.btn-home a, .header__menu ul > li.btn-notif a { padding: 0 20px; }
+.header__menu ul > li.btn-message a, .header__menu ul > li.btn-home a, .header__menu ul > li.btn-notif a { padding: 0 30px; }
 
 .header__menu ul > li.btn-message .icon, .header__menu ul > li.btn-home .icon, .header__menu ul > li.btn-notif .icon { width: 28px; height: 28px; display: inline-block; vertical-align: middle; position: relative; transition: all .3s ease-in-out; }
 
 .header__menu ul > li.btn-message .icon .ic, .header__menu ul > li.btn-home .icon .ic, .header__menu ul > li.btn-notif .icon .ic { width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; transition: all .3s ease-in-out; }
 
 .header__menu ul > li.btn-message .icon .number, .header__menu ul > li.btn-home .icon .number, .header__menu ul > li.btn-notif .icon .number { width: 15px; text-align: center; font-size: 10px; line-height: 15px; color: #fff; display: inline-block; letter-spacing: 0.25px; background: #DF5055; border-radius: 3px; position: absolute; top: -6px; right: -6px; font-style: normal; }
-
-.header__menu ul > li.btn-notif { margin-right: 32px; }
 
 .header__menu ul > li.btn-login a { color: #FFF; font-family: "Druk Wide", sans-serif; font-weight: 600; border-radius: 5px; background: #4C9F70 linear-gradient(180deg, #6bbb71 0%, #017961 100%) 0% 0% no-repeat padding-box; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); }
 
