@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="stylesheet" href="styles/plugins.css"/>
     <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css"/>
-    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/main.css?v=300"/>
   </head>
   <body>
     <div id="wrap">
@@ -91,7 +91,7 @@
                   <div class="clue">Scroll kebawah untuk melihat lebih banyak</div>
                 </div>
               </li>
-              <li class="btn-home hide-mobile"><a href="#"><i class="icon">
+              <li class="btn-guide hide-mobile"><a href="#"><i class="icon">
                     <div class="ic" style="background-image: url(images/fi-rr-interrogation.svg)"></div></i></a></li>
               <li class="btn-login"><a href="#">LOGOUT</a></li>
             </ul>
@@ -607,6 +607,12 @@
           content: "<h4><img src='images/ic-idr-nobox.svg'>Sudah Terbayar</h4><p>Berikut ini adalah kumpulan bukti bahwa Anda telah membayar.</p>",
           buttons: {
             text:'Mengerti',
+          },
+          onHide: function () {
+            $('body').removeClass('no-scroll');
+            $('html, body').animate({
+              scrollTop: 0
+            }, 300)
           }
         }
       ])
@@ -615,7 +621,13 @@
       })
       setTimeout(function() {
         tour.show()
-      }, 4800)
+      }, 4800);
+      
+      $('.btn-guide').each(function(){
+        $(this).click(function(){
+          tour.show();
+        })
+      })
     </script>
   </body>
 </html>
