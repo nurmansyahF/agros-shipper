@@ -914,11 +914,13 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 .header__menu ul > li.btn-message, .header__menu ul > li.btn-home, .header__menu ul > li.btn-notif, .header__menu ul > li.btn-guide { border-right: 1px solid #CACACA; }
 
-.header__menu ul > li.btn-message a, .header__menu ul > li.btn-home a, .header__menu ul > li.btn-notif a, .header__menu ul > li.btn-guide a { padding: 0 30px; }
+.header__menu ul > li.btn-message a, .header__menu ul > li.btn-home a, .header__menu ul > li.btn-notif a, .header__menu ul > li.btn-guide a { padding: 0 30px; transition: none; }
 
-.header__menu ul > li.btn-message .icon, .header__menu ul > li.btn-home .icon, .header__menu ul > li.btn-notif .icon, .header__menu ul > li.btn-guide .icon { width: 28px; height: 28px; display: inline-block; vertical-align: middle; position: relative; transition: all .3s ease-in-out; }
+.header__menu ul > li.btn-message a:hover, .header__menu ul > li.btn-home a:hover, .header__menu ul > li.btn-notif a:hover, .header__menu ul > li.btn-guide a:hover { opacity: 1; }
 
-.header__menu ul > li.btn-message .icon .ic, .header__menu ul > li.btn-home .icon .ic, .header__menu ul > li.btn-notif .icon .ic, .header__menu ul > li.btn-guide .icon .ic { width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; transition: all .3s ease-in-out; }
+.header__menu ul > li.btn-message .icon, .header__menu ul > li.btn-home .icon, .header__menu ul > li.btn-notif .icon, .header__menu ul > li.btn-guide .icon { width: 25px; height: 25px; display: inline-block; vertical-align: middle; position: relative; }
+
+.header__menu ul > li.btn-message .icon .ic, .header__menu ul > li.btn-home .icon .ic, .header__menu ul > li.btn-notif .icon .ic, .header__menu ul > li.btn-guide .icon .ic { width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; max-width: 25px; max-height: 25px; }
 
 .header__menu ul > li.btn-message .icon .number, .header__menu ul > li.btn-home .icon .number, .header__menu ul > li.btn-notif .icon .number, .header__menu ul > li.btn-guide .icon .number { width: 15px; text-align: center; font-size: 10px; line-height: 15px; color: #fff; display: inline-block; letter-spacing: 0.25px; background: #DF5055; border-radius: 3px; position: absolute; top: -6px; right: -6px; font-style: normal; }
 
@@ -936,7 +938,29 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 .header__menu ul > li.btn-guide.hide-mobile { border: 0; }
 
-.header__menu ul > li.btn-guide.hide-mobile .icon { width: 27px; height: 27px; }
+.header__menu ul > li.btn-message:hover { opacity: 1; }
+
+.header__menu ul > li.btn-message:hover .icon { opacity: 1; }
+
+.header__menu ul > li.btn-message:hover .icon .ic { opacity: 1; background-image: url(../images/ic-messenger-active.svg) !important; max-width: 25px; max-height: 25px; }
+
+.header__menu ul > li.btn-home:hover { opacity: 1; }
+
+.header__menu ul > li.btn-home:hover .icon { opacity: 1; }
+
+.header__menu ul > li.btn-home:hover .icon .ic { opacity: 1; background-image: url(../images/ic-home-active.svg) !important; max-width: 25px; max-height: 25px; }
+
+.header__menu ul > li.btn-notif:hover { opacity: 1; }
+
+.header__menu ul > li.btn-notif:hover .icon { opacity: 1; }
+
+.header__menu ul > li.btn-notif:hover .icon .ic { opacity: 1; background-image: url(../images/ic-notif-active.svg) !important; max-width: 25px; max-height: 25px; }
+
+.header__menu ul > li.btn-guide:hover { opacity: 1; }
+
+.header__menu ul > li.btn-guide:hover .icon { opacity: 1; }
+
+.header__menu ul > li.btn-guide:hover .icon .ic { opacity: 1; background-image: url(../images/fi-rr-interrogation-active.png) !important; max-width: 25px; max-height: 25px; }
 
 .header.header--white .header__logo .img { display: none; }
 
