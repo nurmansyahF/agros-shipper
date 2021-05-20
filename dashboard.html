@@ -867,9 +867,23 @@
     <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
     <script>
+      var w = $(window).width();
+      if (w > 760) {
+        var pos1 = 'center-right',
+            pos2 = 'center-left',
+            pos3 = 'right',
+            pos4 = 'bottom',
+            cn6 =  'annoNotif right-bottom';
+      }else{
+        var pos1 = 'center-bottom',
+            pos2 = 'center-top',
+            pos3 = 'center-bottom',
+            pos4 = 'center-bottom',
+            cn6 =  'annoNotif mobile';
+      }
       var tour = new Anno([{
         target: '#anno-1',
-        position: 'center-right',
+        position: pos1,
         className: 'annoNotif',
         content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Tambah Purchase Order</h4><p>Anda dapat melakukan order melalui button ini dan isi formulir sesuai dengan kebutuhan Anda.</p>",
         buttons: {
@@ -877,7 +891,7 @@
         }
       },{
         target: '#anno-2',
-        position:'center-left',
+        position: pos2,
         className: 'annoNotif',
         content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Status Purchase Order</h4><p>Jumlah Purchase Order Anda yang sudah dalam proses dan yang tertunda dari total pemesanan yang Anda miliki.</p>",
         buttons: [
@@ -893,7 +907,7 @@
         ]
       },{
         target: '#anno-3',
-        position:'center-right',
+        position: pos1,
         className: 'annoNotif',
         content: "<h4><img src='images/ic-idr-nobox.svg'>Status Transaksi</h4><p>Semua kegiatan transaksi akan berlangsung disini.</p>",
         buttons: [
@@ -909,7 +923,7 @@
         ]
       },{
         target: '#anno-4',
-        position:'bottom',
+        position: pos4,
         className: 'annoNotif bottom',
         content: "<h4><img src='images/ic-file-nobox.svg'>Delivery Order Terbaru</h4><p>Anda bisa melihat langsung Delivery Order yang sedang berjalan atau yang sedang kami proses.</p>",
         buttons: [
@@ -925,7 +939,7 @@
         ]
       },{
         target: '#anno-5',
-        position:'right',
+        position: pos3,
         className: 'annoNotif right',
         content: "<h4><img src='images/ic-location-nobox.svg'>Status Delivery Order</h4><p>Anda dapat melakukan order melalui button ini dan isi formulir sesuai dengan kebutuhan Anda.</p>",
         buttons: [
@@ -942,7 +956,7 @@
       },{
         target: '#anno-6',
         position:'center-bottom',
-        className: 'annoNotif right-bottom',
+        className: cn6,
         content: "<h4><img src='images/ic-location-nobox.svg'>Riwayat Purchase Order</h4><p>Pengarsipan secara pribadi dapat Anda lacak melalui riwayat pemesan ini.</p>",
         buttons: [{
             text: 'Mengerti'
@@ -975,6 +989,12 @@
       setTimeout(function() {
         tour.show();
       }, 4800);
+      $(window).resize(function() {
+        tour.hide();
+        setTimeout(function() {
+          tour.show();
+        }, 800);
+      })
       
       $('.btn-guide').each(function(){
         $(this).click(function(){

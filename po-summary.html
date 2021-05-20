@@ -561,10 +561,26 @@
     <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
     <script>
+      var w = $(window).width();
+      if (w > 760) {
+        var pos1 = 'center-right',
+            pos2 = 'center-left',
+            pos3 = 'right',
+            pos4 = 'bottom',
+            pos5 = 'center-top',
+            cn6 =  'annoNotif right-bottom';
+      }else{
+        var pos1 = 'center-top',
+            pos2 = 'center-top',
+            pos3 = 'center-bottom',
+            pos4 = 'center-bottom',
+            pos5 = 'center-bottom',
+            cn6 =  'annoNotif mobile';
+      }
       var tour = new Anno([
         {
           target: '#anno-1',
-          position: 'center-right',
+          position: pos1,
           className: 'annoNotif',
           content: "<h4><img src='images/ic-idr-nobox.svg'>Status Muatan</h4><p>Halaman ini akan menampilkan kegiatan yang berlangsung dari muatan Anda, menghitung yang <b style='color:#4C9F70'>Terkirim</b>, <b style='color: #517CA7;'>Dikirim</b> dan <b style='color:#826FCE;'>Tertunda</b>.</p>",
           buttons: {
@@ -591,7 +607,13 @@
       })
       setTimeout(function() {
         tour.show()
-      }, 4800)
+      }, 4850);
+      $(window).resize(function() {
+        tour.hide();
+        setTimeout(function() {
+          tour.show();
+        }, 800);
+      })
       $('.btn-guide').each(function(){
         $(this).click(function(){
           tour.show();

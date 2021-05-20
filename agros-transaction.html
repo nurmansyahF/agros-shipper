@@ -591,10 +591,26 @@
     <script src="http://iamdanfox.github.io/anno.js/scrollintoview/jquery.scrollintoview.min.js"></script>
     <script src="scripts/main.js"></script>
     <script>
+      var w = $(window).width();
+      if (w > 760) {
+        var pos1 = 'center-right',
+            pos2 = 'center-left',
+            pos3 = 'right',
+            pos4 = 'bottom',
+            pos5 = 'center-top',
+            cn6 =  'annoNotif top-left';
+      }else{
+        var pos1 = 'center-bottom',
+            pos2 = 'center-top',
+            pos3 = 'center-bottom',
+            pos4 = 'center-bottom',
+            pos5 = 'center-bottom',
+            cn6 =  'annoNotif mobile';
+      }
       var tour = new Anno([
         {
           target: '#anno-1',
-          position: 'center-top',
+          position: pos5,
           className: 'annoNotif',
           content: "<h4><img src='images/ic-idr-nobox.svg'>Status Transaksi</h4><p>Tagihan Anda akan muncul disini.<br> <b style='color:#DF5055;';>Merah</b> adalah tanda Anda harus membayarnya dan Hijau berarti sudah melunasinya.</p>",
           buttons: {
@@ -603,7 +619,7 @@
         },{
           target: '#anno-2',
           position: 'center-top',
-          className: 'annoNotif top-left',
+          className: cn6,
           content: "<h4><img src='images/ic-idr-nobox.svg'>Sudah Terbayar</h4><p>Berikut ini adalah kumpulan bukti bahwa Anda telah membayar.</p>",
           buttons: {
             text:'Mengerti',
@@ -621,7 +637,13 @@
       })
       setTimeout(function() {
         tour.show()
-      }, 4800);
+      }, 4850);
+      $(window).resize(function() {
+        tour.hide();
+        setTimeout(function() {
+          tour.show();
+        }, 800);
+      })
       
       $('.btn-guide').each(function(){
         $(this).click(function(){
