@@ -1,0 +1,977 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "dashboard";
+  - var headerText = "SHIPPER";
+
+block header
+  header.header#header(class=headerColor=="white"?"header--white":"")
+    .container
+      a.header__logo(href="dashboard.html")
+        img.img(src="images/logo-agros.png")
+        img.img-alt(src="images/logo-agros-alt.png")
+        span.text= headerText
+      .header__menu
+        ul
+          //- li.btn-message.show-mobile
+          //-   a(href="#")
+          //-     i.icon
+          //-       .ic(style="background-image: url(images/ic-messenger.svg)")
+          li.btn-home.hide-mobile
+            a(href="dashboard.html")
+              i.icon
+                .ic(style="background-image: url(images/ic-home.svg)")
+          li.btn-notif
+            a(href="#")
+              span.icon
+                .ic(style="background-image: url(images/ic-notif.svg)")
+                i.number 3
+            .notif-box
+              //- h3 Notifikasi
+              .n-wrapper
+                .pertime
+                  span Hari ini,
+                  span.t-notif  3 Notifikasi Baru
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-coin.png)")
+                  .box-text
+                    small Agros Transaction
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PO AGR001/02/2020#096
+                    a.btn-do(href="#") Selesaikan Tagihan 1
+                    .time 15 menit yang lalu
+                  .tag.new Baru
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-coin.png)")
+                  .box-text
+                    small Agros Transaction
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PO AGR001/02/2020#096
+                    a.btn-do(href="#") Selesaikan Tagihan 1
+                    .time 15 menit yang lalu
+                  .tag.new Baru
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-coin.png)")
+                  .box-text
+                    small Agros Transaction
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PO AGR001/02/2020#096
+                    a.btn-do(href="#") Selesaikan Tagihan 1
+                    .time 15 menit yang lalu
+                .pertime
+                  span Kemarin,
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                  .box-text
+                    small Agros Messengger
+                    h4 Muatan Terlambat Karena...
+                    span.nopo Mega Admin: Kemarin sebenernya sudah di lanjutkan
+                    .time 1 Hari yang lalu
+                  .tag.msg 12 Pesan
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                  .box-text
+                    small Agros Messengger
+                    h4 Muatan Terlambat Karena ...
+                    span.nopo Leny Admin: Kemarin sebenernya sudah di lanjutkan
+                    .time 1 Hari yang lalu
+                  .tag.msg 12 Pesan
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-pending.png)")
+                  .box-text
+                    small Muatan Tertunda
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PURCHASE ORDER AGR001/02/2020#096
+                    .time 1 Hari yang lalu
+              .clue Scroll kebawah untuk melihat lebih banyak
+          li.btn-guide
+            a(href="#")
+              i.icon
+                .ic(style="background-image: url(images/fi-rr-interrogation.svg)")
+          li.btn-logout.show-mobile
+            a(href="#")
+              i.icon
+                .ic(style="background-image: url(images/fi-rr-power.svg)")
+          li.btn-login
+            a(href="#") LOGOUT
+      .header__toggle
+        span
+        span
+        span
+      .mobile__floating-menu
+        ul
+          li(class=activepage =="dashboard"? "current-page":"")
+            a(href="dashboard.html")
+              .icon-box
+                .icon(style=activepage =="dashboard"? "background-image: url(images/ic-menu-mobile-active-01.svg)":"background-image: url(images/ic-menu-mobile-01.svg)")
+              span Home
+
+          li(class=activepage =="order"? "current-page":"")
+            a(href="#")
+              .icon-box
+                .icon(style=activepage =="order"? "background-image: url(images/ic-menu-mobile-active-02.svg)":"background-image: url(images/ic-menu-mobile-02.svg)")
+              span Order
+          li(class=activepage =="muatan"? "current-page":"")
+            a(href="#")
+              .icon-box
+                .icon(style=activepage =="muatan"? "background-image: url(images/ic-menu-mobile-active-03.svg)":"background-image: url(images/ic-menu-mobile-03.svg)")
+              span Muatan
+
+block content
+
+  .loading-page
+    .loading-page__wrap
+      .loading-page__logo
+        .icon
+          img(src="images/logo-icon.png")
+        .text
+          img(src="images/logo-text.png")
+    span.foot-text PT ANTAR GLOBAL PROSPERO
+  .block-dashboard
+    section.inner-header
+      .container
+        .row
+          .col-lg-7.animate.animate--up
+            h1 Dashboard
+          .col-lg-5.animate.animate--up
+            .search
+              form
+                .form-group
+                  input.form-control(type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ...")
+              .sugestion
+                ul
+                  li
+                    a(href="#") Lorem ipsum doloer sit amet
+                  li
+                    a(href="#") Lorem ipsum doloer sit amet
+                  li
+                    a(href="#") Lorem ipsum doloer sit amet
+        .breadcrubms.animate.animate--up
+          u NAVIGATION :
+          a(href="#") Homepage
+          span Dashboard
+
+    section.po-and-features
+      .container
+        .row
+          .col-lg-4
+            .box-card.animate.animate--up
+              a.boxlink(href="#")
+              .icon
+                .ic(style="background-image: url(images/ic-user-accnt.png)")
+              h3 PT. ANTAR GLOBAL PROSPERO
+              .contact
+                a(href="tel: +62313974550") +62 (31) 3974550
+                <br>
+                a(href="mailto:antarglobalprospero@gmail.com") Antarglobalprospero@gmail.com
+              a.ext-link(href="#" target="_blank")
+
+          .col-lg-4#anno-1
+            .box-card.gradient-green.animate.animate--up(style="background-image: url(images/box-bg-pattern-green.png)")
+              a.boxlink(href="po-add.html")
+              .icon
+                .ic(style="background-image: url(images/ic-box-add.png)")
+              a.ext-link(href="po-add.html" target="_blank")
+              h3 TAMBAH <br>PURCHASE ORDER
+              .text
+                p Purchase order dapat dilakukan <br>dalam Agros Shipper
+          .col-lg-4#anno-2
+            .row
+              .col-lg-6
+                .box-card.light-green.animate.animate--up
+                  a.boxlink(href="#")
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-check.png)")
+                  h4 <b>PO</b> Aktif
+                  .text
+                    p Purchase order yang <b>sedang berjalan</b>.
+                  .total
+                    span 10
+                  .link-seemore
+                    span(href="#") Lihat lebih lanjut
+              .col-lg-6
+                .box-card.cream.animate.animate--up
+                  a.boxlink(href="#")
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-file.png)")
+                  h4 <b>PO</b> Sisa
+                  .text
+                    p Purchase order yang <b>belum berjalan</b>.
+                  .total
+                    span 2
+                  .link-seemore
+                    span Lihat lebih lanjut
+        .row
+          .col-lg-3
+            .box-card.animate.animate--up
+              a.boxlink(href="#")
+              .icon
+                .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                .floating-number 3
+              h4 <b>Agros</b> Messenger
+              .text
+                p Interaksi eksklusif <b>1-ON-1</b> bersama Agros Sales / Admin sesuai dengan Office Hours.
+              .link-seemore
+                span <b>MON - FRI</b> 09.00 - 17.00
+          .col-lg-3#anno-3
+            .box-card.atrans.blink.animate.animate--up
+              a.boxlink(href="#")
+              .icon
+                .ic(style="background-image: url(images/ic-rect-coin.png)")
+                .floating-number 3
+              h4 <b>Agros</b> Transaction
+              .text
+                p Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda.
+              .link-seemore
+                span Lihat Tagihan Anda
+          .col-lg-6.hide-mobile
+            .poa__slider.animate.animate--up
+              .slider-item
+                .box-card.row
+                  a.boxlink(href="#")
+                  .col-md-6
+                    .icon
+                      .ic(style="background-image: url(images/ic-rect-message.png)")
+                    h4 <b>Kritik atau Saran?</b>
+                    .text
+                      p Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.
+                    .link-seemore
+                      a(href="#") <b>Masukan Kritik atau Saran</b>
+                  .col-md-6
+                    img(src="images/img-kritik-saran.png", alt="img")
+              .slider-item
+                .box-card.row
+                  .col-md-6
+                    .icon
+                      .ic(style="background-image: url(images/ic-rect-message.png)")
+                    h4 <b>Kritik atau Saran?</b>
+                    .text
+                      p Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.
+                    .link-seemore
+                      a(href="#") <b>Masukan Kritik atau Saran</b>
+                  .col-md-6
+                    img(src="images/img-kritik-saran.png", alt="img")
+
+    section.your-do
+      .container
+        .your-do__head.animate.animate--up
+          .row
+            .col-lg-9
+              h3 Halo PT. Antar Global Prospero,
+              h2 Delivery order Anda
+            .col-lg-3
+              .date-box
+                a.arrow.before(href="#")
+                  .ic-arrow
+                .box-text SELASA, 20.02.2021
+                a.arrow.after(href="#")
+                  .ic-arrow
+        .your-do__do-det.animate.animate--up#anno-4
+          a.boxlink(href="#")
+          .row
+            .col-lg-6
+              .box-po
+                span.small-title Nomor Purchase Order
+                h3 AGR001/02/2020#096
+                .progress-bar
+                  .pb
+                    .pb-block
+                      span(style="width: 20%")
+                    .prcntg 20%
+                  small Prosentase pengiriman muatan Anda.
+                .row
+                  .col-lg-6
+                    .box-text
+                      p Batubara
+                      small Nama Barang
+                  .col-lg-6
+                    .box-text
+                      p 20.000 TON
+                      small Tonase / Kubikasi
+            .col-lg-3
+              .box-card.light-green
+                a.boxlink(href="do-active.html")
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-do-active.png)")
+                h4 <b>DO</b> Aktif
+                .text
+                  p Delivery order yang sedang dalam pengiriman.
+                .total
+                  span 400
+                .link-seemore
+                  a(href="do-active.html") Lihat lebih lanjut
+            .col-lg-3
+              .box-card.cream
+                a.boxlink(href="do-rest.html")
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-do-sisa.png)")
+                h4 <b>DO</b> Sisa
+                .text
+                  p Delivery order yang sedang kami proses.
+                .total
+                  span 200
+                .link-seemore
+                  a(href="do-rest.html") Lihat lebih lanjut
+          a.ext-link(href="#" target="_blank")
+
+        .your-do__payload.animate.animate--up
+          .row
+            .col-lg-3#anno-5
+              .box-tab
+                h3 Status Muatan
+                  .link-seemore.show-mobile
+                    a(href="#")
+                .text
+                  p Pilih salah satu menu untuk mendapatkan informasi yang Anda inginkan terkait dengan muatan Anda.
+                .tabs
+                  ul.nav(id="payload_status" role="tablist")
+                    li.nav-item(role="presentation")
+                      a.active(id="tab_1" data-toggle="tab" href="#tabPane_1" role="tab" aria-controls="home" aria-selected="true")
+                        .icon
+                          .ic(style="background-image: url(images/ic-rect-check-send.png)")
+                        span Terkirim
+                    li.nav-item(role="presentation")
+                      a(id="tab_2" data-toggle="tab" href="#tabPane_2" role="tab" aria-controls="home" aria-selected="true")
+                        .icon
+                          .ic(style="background-image: url(images/ic-rect-sent.png)")
+                        span Dikirim
+                    li.nav-item(role="presentation")
+                      a(id="tab_3" data-toggle="tab" href="#tabPane_3" role="tab" aria-controls="home" aria-selected="true")
+                        .icon
+                          .ic(style="background-image: url(images/ic-rect-pending.png)")
+                        span Tertunda
+                .link-seemore.hide-mobile
+                  a(href="#") Lihat lebih lanjut
+            .col-lg-9
+              .tab-content.animate.animate--up(id="payload_status_tabpane")
+                .tab-pane.fade.show.active(id="tabPane_1" role="tabpanel" aria-labelledby="home-tab")
+                  .payload-list-box.green
+                    ul.payload-list
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.71
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.72
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.73
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.74
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.75
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.76
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.77
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.78
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.79
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.80
+                          .arrow
+
+                    .txt-notif.show-mobile
+                      p Geser kiri dan kanan untuk melihat lebih banyak
+
+                    .pagination-wrap
+                      u Halaman
+                      ul.pagination
+                        li.active
+                          span 1
+                        li
+                          a(href="#") 2
+                        li
+                          a(href="#") 3
+                        li
+                          a(href="#") 4
+                        li
+                          a(href="#") 5
+
+                        li.before
+                          a(href="#")
+                            .ic-arrow
+                        li.after
+                          a(href="#")
+                            .ic-arrow
+
+                .tab-pane(id="tabPane_2" role="tabpanel" aria-labelledby="home-tab")
+                  .payload-list-box.blue
+                    ul.payload-list.animate.animate--up
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.71
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.72
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.73
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.74
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.75
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.76
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.77
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.78
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.79
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.80
+                          .arrow
+                    .txt-notif.show-mobile
+                      p Geser kiri dan kanan untuk melihat lebih banyak
+                    .pagination-wrap
+                      u Halaman
+                      ul.pagination
+                        li.active
+                          span 1
+                        li
+                          a(href="#") 2
+                        li
+                          a(href="#") 3
+                        li
+                          a(href="#") 4
+                        li
+                          a(href="#") 5
+
+                        li.before
+                          a(href="#")
+                            .ic-arrow
+                        li.after
+                          a(href="#")
+                            .ic-arrow
+                .tab-pane(id="tabPane_3" role="tabpanel" aria-labelledby="home-tab")
+                  .payload-list-box.purple
+                    ul.payload-list.animate.animate--up
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.71
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.72
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.73
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.74
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.75
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.76
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.77
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.78
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.79
+                          .arrow
+                      li.item
+                        a(href="#")
+                          .icon-box
+                            .icon
+                              .ic(style="background-image: url(images/ic-rect-loct.png)")
+                          .do-numb DO-AGRS-040221.80
+                          .arrow
+
+                    .txt-notif.show-mobile
+                      p Geser kiri dan kanan untuk melihat lebih banyak
+
+                    .pagination-wrap
+                      u Halaman
+                      ul.pagination
+                        li.active
+                          span 1
+                        li
+                          a(href="#") 2
+                        li
+                          a(href="#") 3
+                        li
+                          a(href="#") 4
+                        li
+                          a(href="#") 5
+
+                        li.before
+                          a(href="#")
+                            .ic-arrow
+                        li.after
+                          a(href="#")
+                            .ic-arrow
+
+    section.agros-service
+      .container
+        .section__head.animate.animate--up
+          h2 Layanan Agros
+          p Your Truly Logistics Solutions, Agros selalu memberi kemudahan dan kenyamanan untuk Anda.
+          .link-seemore
+            a(href="#") Homepage Kami
+        .service__slider.animate.animate--up
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item(style="background-image: url(images/hero-home.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS SHOP
+              p Saat terjebak di jalan karena ada gangguan atau kerusakan, armada Agros yang tersebar di seluruh Indonesia akan kami sambungkan dengan bengkel Anda.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS TRANSPORTER
+              p Tidak ada yang tidak mungkin. Kini, Perusahaan bisa dengan cepat mendapatkan keuntungan tanpa harus melakukan hal berat.
+
+              a.link(href="#") Kunjungi laman
+
+    section.po-history
+      .container
+        .home#anno-6
+        .section__head.animate.animate--up
+          h2 Riwayat Purchase Order
+          p Purchase order otomatis akan tersimpan dan terkumpul dalam halaman riwayat.
+          //- .link-seemore
+          //-   a(href="#") Homepage Kami
+        .po-history__list
+          ul
+            li.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span PASIR CUCI
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span LAMONGAN
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span PO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun <u>Tuban</u> - <u>Gresik</u>
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span PASIR CUCI
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span LAMONGAN
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span PO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun <u>Tuban</u> - <u>Gresik</u>
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span PASIR CUCI
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span LAMONGAN
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span PO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun <u>Tuban</u> - <u>Gresik</u>
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span PASIR CUCI
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span LAMONGAN
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span PO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun <u>Tuban</u> - <u>Gresik</u>
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span PASIR CUCI
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span LAMONGAN
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span PO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun <u>Tuban</u> - <u>Gresik</u>
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+
+        .row
+          .col-lg-6
+          .col-lg-6
+            .pagination-wrap
+              u Halaman
+              ul.pagination
+                li.active
+                  span 1
+                li
+                  a(href="#") 2
+                li
+                  a(href="#") 3
+                li
+                  a(href="#") 4
+                li
+                  a(href="#") 5
+
+                li.before
+                  a(href="#")
+                    .ic-arrow
+                li.after
+                  a(href="#")
+                    .ic-arrow
+
+block addscript
+  script.
+    var w = $(window).width();
+    if (w > 760) {
+      var pos1 = 'center-right',
+          pos2 = 'center-left',
+          pos3 = 'right',
+          pos4 = 'bottom',
+          cn6 =  'annoNotif right-bottom';
+    }else{
+      var pos1 = 'center-bottom',
+          pos2 = 'center-top',
+          pos3 = 'center-bottom',
+          pos4 = 'center-bottom',
+          cn6 =  'annoNotif mobile';
+    }
+    var tour = new Anno([{
+      target: '#anno-1',
+      position: pos1,
+      className: 'annoNotif',
+      content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Tambah Purchase Order</h4><p>Anda dapat melakukan order melalui button ini dan isi formulir sesuai dengan kebutuhan Anda.</p>",
+      buttons: {
+        text:'Lanjut',
+      }
+    },{
+      target: '#anno-2',
+      position: pos2,
+      className: 'annoNotif',
+      content: "<h4><img src='images/ic-externllink-nobxo.jpg'>Status Purchase Order</h4><p>Jumlah Purchase Order Anda yang sudah dalam proses dan yang tertunda dari total pemesanan yang Anda miliki.</p>",
+      buttons: [
+        {
+          text: 'Jelajahi Fitur ?',
+          className: 'explore',
+          click: function(anno, evt){
+            window.open('po-active.html')
+          }
+        }, {
+          text: 'Lanjut'
+        }
+      ]
+    },{
+      target: '#anno-3',
+      position: pos1,
+      className: 'annoNotif',
+      content: "<h4><img src='images/ic-idr-nobox.svg'>Status Transaksi</h4><p>Semua kegiatan transaksi akan berlangsung disini.</p>",
+      buttons: [
+        {
+          text: 'Jelajahi Fitur ?',
+          className: 'explore',
+          click: function(anno, evt){
+            window.open('agros-transaction.html')
+          }
+        }, {
+          text: 'Lanjut'
+        }
+      ]
+    },{
+      target: '#anno-4',
+      position: pos4,
+      className: 'annoNotif bottom',
+      content: "<h4><img src='images/ic-file-nobox.svg'>Delivery Order Terbaru</h4><p>Anda bisa melihat langsung Delivery Order yang sedang berjalan atau yang sedang kami proses.</p>",
+      buttons: [
+        {
+          text: 'Jelajahi Fitur ?',
+          className: 'explore',
+          click: function(anno, evt){
+            window.open('po-summary.html')
+          }
+        }, {
+          text: 'Lanjut'
+        }
+      ]
+    },{
+      target: '#anno-5',
+      position: pos3,
+      className: 'annoNotif right',
+      content: "<h4><img src='images/ic-location-nobox.svg'>Status Delivery Order</h4><p>Anda dapat melakukan order melalui button ini dan isi formulir sesuai dengan kebutuhan Anda.</p>",
+      buttons: [
+        {
+          text: 'Jelajahi Fitur ?',
+          className: 'explore',
+          click: function(anno, evt){
+            window.open('#')
+          }
+        }, {
+          text: 'Lanjut'
+        }
+      ]
+    },{
+      target: '#anno-6',
+      position:'center-bottom',
+      className: cn6,
+      content: "<h4><img src='images/ic-location-nobox.svg'>Riwayat Purchase Order</h4><p>Pengarsipan secara pribadi dapat Anda lacak melalui riwayat pemesan ini.</p>",
+      buttons: [{
+          text: 'Mengerti'
+        }
+      ],
+      onShow: function () {
+        $('.po-history .section__head').addClass('forward');
+        $('.po-history__list').addClass('forward');
+        setTimeout(function() {
+          $('html, body').animate({
+            scrollTop: $('body').find('#anno-6').offset().top + 400
+          }, 300)
+        }, 800)
+
+      },
+      onHide: function () {
+        $('#anno-6').addClass('hide')
+        $('.po-history .section__head').removeClass('forward');
+        $('.po-history__list').removeClass('forward');
+        $('body').removeClass('no-scroll');
+        $('html, body').animate({
+          scrollTop: 0
+        }, 300)
+      },
+    }
+    ]);
+    $('[id*="anno-"]').each(function(){
+      $(this).addClass('animate--in');
+    })
+    setTimeout(function() {
+      tour.show();
+    }, 4800);
+    $(window).resize(function() {
+      tour.hide();
+      setTimeout(function() {
+        tour.show();
+      }, 800);
+    })
+
+    $('.btn-guide').each(function(){
+      $(this).click(function(){
+        tour.show();
+      })
+    })

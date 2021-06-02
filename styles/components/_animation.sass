@@ -1,0 +1,180 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Animation */
+/* ------------------------------------------------------------------------------------------------ */
+
+#wrap
+  opacity: 0
+  transition: opacity 1.5s ease
+  .header
+    top: -100%
+    opacity: 0
+    transition: all 0.75s ease
+  .masthead__wrap
+    top: 100px
+    opacity: 0
+    transition: all 0.75s ease
+    transition-delay: .5s
+  .loading-page
+    top: 0
+    transition: all 0.5s ease
+body
+  overflow-x: hidden
+  transition: all .3s ease-in-out
+body.loading
+  opacity: 1
+  position: fixed
+  #wrap
+    opacity: 1
+body.load-page
+  position: relative
+  #wrap
+    opacity: 1
+    background: #FFF
+    .header
+      top: 0
+      opacity: 1
+    .masthead__wrap
+      top: 0
+      opacity: 1
+    .loading-page
+      top: -100%
+  .btn-joinus
+    right: 0
+body.link-transition
+  #wrap
+    opacity: 0
+    .header
+      top: -200%
+      opacity: 0
+      transition: all 2s ease-in-out
+    main
+      // transform: scale(1.013)
+      transition: all 1s ease-in-out
+
+
+// animate on scroll
+.animate
+  position: relative
+  transition: all .5s ease-in-out
+  &.animate--up
+    top: 100px
+    opacity: 0
+    &.animate--in
+      top: 0
+      opacity: 1
+  &.animate--left
+    left: -100px
+    opacity: 0
+    &.animate--in
+      left: 0
+      opacity: 1
+  &.animate--delay-1
+    transition-delay: 0.25s
+  &.animate--delay-2
+    transition-delay: 0.5s
+  &.animate--delay-3
+    transition-delay: 0.75s
+  &.animate--delay-4
+    transition-delay: 1s
+  &.animate--delay-6
+    transition-delay: 3s
+  &.animate--delay-7
+    transition-delay: 3.25s
+  &.animate--delay-8
+    transition-delay: 3.5s
+  &.animate--delay-9
+    transition-delay: 3.75s
+  &.animate--delay-10
+    transition-delay: 4s
+
+
+=pulse()
+  box-shadow: 0 0 0 rgba(0,0,0, 0.4)
+  animation: pulse 2s infinite
+
+
+@keyframes pulse
+  0%
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0.4)
+  70%
+    box-shadow: 0 0 0 14px rgba(0,0,0, 0)
+  100%
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0)
+
+@keyframes blinkred
+  0%
+    opacity: 1
+    color: #DF5055
+  100%
+    opacity: 1
+    color: #ffffff
+
+@keyframes blinkblack
+  0%
+    opacity: 1
+  //   color: #000
+  100%
+    opacity: 1
+    color: #FFF
+
+@keyframes blinkgrey
+  0%
+    opacity: 1
+    color: #777
+  100%
+    opacity: 1
+    color: #fff
+
+@keyframes blinkicon
+  // 0%
+  //   // background-image: url(../images/ic-invoice-dp-red1.png)
+  100%
+    background-image: url(../images/ic-invoice-dp-red.png)
+
+  // 100%
+  //   background-image: url(../images/ic-invoice-dp-red.png)
+
+@keyframes blinkbg
+  0%
+    opacity: 1
+  //   background: #f8f8f8
+  100%
+    // background-image: url(../images/box-bg-pattern-red.png)
+    // background-size: cover
+    // background-position: center
+    // background-repeat: no-repeat
+
+@keyframes test
+  0%
+    color: red
+  50%
+    color: blue
+  100%
+    color: #000
+
+
+
+
+@keyframes zoom
+  0%
+    transform: scale(1)
+  0%
+    transform: scale(1.05)
+  100%
+    transform: scale(1)
+
+
+=logoRotation()
+  animation: logoRotation 3s infinite
+
+@keyframes logoRotation
+  0%
+    transform: rotate(0)
+  20%
+    transform: rotate(180deg)
+  50%
+    transform: rotate(180deg)
+  70%
+    transform: rotate(0)
+  100%
+    transform: rotate(0)

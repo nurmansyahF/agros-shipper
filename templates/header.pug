@@ -1,0 +1,117 @@
+header.header#header(class=headerColor=="white"?"header--white":"")
+  .container
+    a.header__logo(href="dashboard.html")
+      img.img(src="images/logo-agros.png")
+      img.img-alt(src="images/logo-agros-alt.png")
+      span.text= headerText
+    .header__menu
+      ul
+        //- li.btn-message.show-mobile
+        //-   a(href="#")
+        //-     i.icon
+        //-       .ic(style="background-image: url(images/ic-messenger.svg)")
+        li.btn-home.hide-mobile
+          a(href="dashboard.html")
+            i.icon
+              .ic(style="background-image: url(images/ic-home.svg)")
+        li.btn-notif
+          a(href="#")
+            span.icon
+              .ic(style="background-image: url(images/ic-notif.svg)")
+              i.number 3
+          .notif-box
+            //- h3 Notifikasi
+            .n-wrapper
+              .pertime
+                span Hari ini,
+                span.t-notif  3 Notifikasi Baru
+              .notif-item
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-coin.png)")
+                .box-text
+                  small Agros Transaction
+                  h4 DO-AGRS-040221.71
+                  span.nopo NO. PO AGR001/02/2020#096
+                  a.btn-do(href="#") Selesaikan Tagihan 1
+                  .time 15 menit yang lalu
+                .tag.new Baru
+              .notif-item
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-coin.png)")
+                .box-text
+                  small Agros Transaction
+                  h4 DO-AGRS-040221.71
+                  span.nopo NO. PO AGR001/02/2020#096
+                  a.btn-do(href="#") Selesaikan Tagihan 1
+                  .time 15 menit yang lalu
+                .tag.new Baru
+              .notif-item
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-coin.png)")
+                .box-text
+                  small Agros Transaction
+                  h4 DO-AGRS-040221.71
+                  span.nopo NO. PO AGR001/02/2020#096
+                  a.btn-do(href="#") Selesaikan Tagihan 1
+                  .time 15 menit yang lalu
+              .pertime
+                span Kemarin,
+              .notif-item
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                .box-text
+                  small Agros Messengger
+                  h4 Muatan Terlambat Karena...
+                  span.nopo Mega Admin: Kemarin sebenernya sudah di lanjutkan
+                  .time 1 Hari yang lalu
+                .tag.msg 12 Pesan
+              .notif-item
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                .box-text
+                  small Agros Messengger
+                  h4 Muatan Terlambat Karena ...
+                  span.nopo Leny Admin: Kemarin sebenernya sudah di lanjutkan
+                  .time 1 Hari yang lalu
+                .tag.msg 12 Pesan
+              .notif-item
+                .icon
+                  .ic(style="background-image: url(images/ic-rect-pending.png)")
+                .box-text
+                  small Muatan Tertunda
+                  h4 DO-AGRS-040221.71
+                  span.nopo NO. PURCHASE ORDER AGR001/02/2020#096
+                  .time 1 Hari yang lalu
+            .clue Scroll kebawah untuk melihat lebih banyak
+        //- li.btn-home.hide-mobile
+        //-   a(href="#")
+        //-     i.icon
+        //-       .ic(style="background-image: url(images/fi-rr-interrogation.svg)")
+        li.btn-logout.show-mobile
+          a(href="#")
+            i.icon
+              .ic(style="background-image: url(images/fi-rr-power.svg)")
+        li.btn-login
+          a(href="#") LOGOUT
+    .header__toggle
+      span
+      span
+      span
+    .mobile__floating-menu
+      ul
+        li(class=activepage =="dashboard"? "current-page":"")
+          a(href="dashboard.html")
+            .icon-box
+              .icon(style=activepage =="dashboard"? "background-image: url(images/ic-menu-mobile-active-01.svg)":"background-image: url(images/ic-menu-mobile-01.svg)")
+            span Home
+
+        li(class=activepage =="order"? "current-page":"")
+          a(href="#")
+            .icon-box
+              .icon(style=activepage =="order"? "background-image: url(images/ic-menu-mobile-active-02.svg)":"background-image: url(images/ic-menu-mobile-02.svg)")
+            span Order
+        li(class=activepage =="muatan"? "current-page":"")
+          a(href="#")
+            .icon-box
+              .icon(style=activepage =="muatan"? "background-image: url(images/ic-menu-mobile-active-03.svg)":"background-image: url(images/ic-menu-mobile-03.svg)")
+            span Muatan

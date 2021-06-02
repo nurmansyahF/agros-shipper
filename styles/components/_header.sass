@@ -1,0 +1,520 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------------------------------------------------------ */
+
+.header
+  z-index: 100
+  position: fixed
+  width: 100%
+  padding: 30px 0
+  // padding: 15px 0
+  transition: all .3s ease-in-out
+  background: #fff
+  box-shadow: 0px 3px 6px #00000029;
+  .container
+    display: flex
+    align-items: center
+  &__logo
+    position: relative
+    display: block
+    img
+      display: block
+      height: 32px
+      width: auto
+    .img
+      display: block
+    .img-alt
+      display: none
+    .text
+      display: block
+      position: absolute
+      color: $text
+      font-size: 12px
+      line-height: 18px
+      text-transform: uppercase
+      bottom: 2px
+      left: calc(100% + 0.5rem)
+
+  &__menu
+    display: block
+    margin-left: auto
+    ul
+      display: flex
+      align-items: center
+      width: 100%
+      &> li
+        display: block
+        position: relative
+        transition: all .3s ease-in-out
+        a
+          color: $text
+          display: block
+          font-size: 12px
+          line-height: 18px
+          font-weight: 400
+          // padding: 11px 20px
+          padding: 11px 30px
+          opacity: 1
+          transition: all .3s ease-in-out
+          &:hover
+            color: $text
+            opacity: 0.5
+        &.btn-message,
+        &.btn-home,
+        &.btn-notif,
+        &.btn-guide,
+        &.btn-logout
+          border-right: 1px solid #CACACA
+          a
+            // padding: 0 20px
+            padding: 0 30px
+            transition: none
+            &:hover
+              opacity: 1
+          .icon
+            width: 25px
+            height: 25px
+            display: inline-block
+            vertical-align: middle
+            position: relative
+            // transition: all .3s ease-in-out
+            .ic
+              width: 100%
+              height: 100%
+              background-size: contain
+              background-repeat: no-repeat
+              background-position: center
+              // transition: all .3s ease-in-out
+              max-width: 25px
+              max-height: 25px
+            .number
+              width: 15px
+              text-align: center
+              font-size: 10px
+              line-height: 15px
+              color: #fff
+              display: inline-block
+              letter-spacing: 0.25px
+              background: #DF5055
+              border-radius: 3px
+              position: absolute
+              top: -6px
+              right: -6px
+              font-style: normal
+        &.btn-notif
+          // margin-right: 32px
+        &.btn-login
+          // margin-left: 13px
+        &.btn-login a
+          color: #FFF
+          font-family: "Druk Wide", sans-serif
+          font-weight: 600
+          border-radius: 5px
+          background: $primary linear-gradient(180deg, rgba(107, 187, 113, 1) 0%, rgba(1, 121, 97, 1) 100%) 0% 0% no-repeat padding-box
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
+          &:hover
+            opacity: 1
+            background: darken($primary, 5%)
+            background: $primary linear-gradient(180deg, rgba(1, 121, 97, 1) 0%, rgba(1, 121, 97, 1) 100%) 0% 0% no-repeat padding-box
+        &.hide-mobile
+          display: block
+          +mobile()
+            display: none
+        &.show-mobile
+          display: none
+          +mobile()
+            display: block
+        &.btn-guide.hide-mobile
+          border: 0
+          // .icon
+          //   width: 27px
+          //   height: 27px
+        &.btn-message
+          &:hover
+            opacity: 1
+            .icon
+              opacity: 1
+              .ic
+                opacity: 1
+                background-image: url(../images/ic-messenger-active.svg) !important
+                max-width: 25px
+                max-height: 25px
+        &.btn-home
+          &:hover
+            opacity: 1
+            .icon
+              opacity: 1
+              .ic
+                opacity: 1
+                background-image: url(../images/ic-home-active.svg) !important
+                max-width: 25px
+                max-height: 25px
+        &.btn-notif
+          &:hover
+            opacity: 1
+            a
+              & > .icon
+                opacity: 1
+                .ic
+                  opacity: 1
+                  background-image: url(../images/ic-notif-active.svg) !important
+                  max-width: 25px
+                  max-height: 25px
+        &.btn-guide
+          &:hover
+            opacity: 1
+            .icon
+              opacity: 1
+              .ic
+                opacity: 1
+                background-image: url(../images/fi-rr-interrogation-active.png) !important
+                max-width: 25px
+                max-height: 25px
+  &.header--white
+    .header__logo
+      .img
+        display: none
+      .img-alt
+        display: block
+      .text
+        color: #FFFFFF
+    .header__menu
+      ul > li:not(.btn-login) a
+        color: #FFFFFF
+        &:hover
+          color: #FFFFFF
+
+  &.sticky
+    background: #FFFFFF
+    padding: 15px 0
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1)
+    .header__logo
+      .img
+        display: block
+      .img-alt
+        display: none
+    .header__menu
+      ul
+        li
+          .icon
+            width: 20px
+            height: 20px
+            // transform: scale(.75)
+          &.btn-login
+            a
+              padding: 8px 20px
+        & > li:not(.btn-login) a
+          olor: $text
+        &:hover
+          color: $text
+
+  .mobile__floating-menu
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 50px
+    background: #000
+    padding: 13px 10px
+    border-radius: 10px
+    max-width: 266px;
+    margin: 0 auto
+    display: none
+    opacity: 0
+    visibility: hidden
+    transition: all .3s ease-in-out
+    ul
+      text-align: center
+      display: flex
+      justify-content: space-between
+    li
+      flex: 0 0 calc(100% / 3)
+      max-height: calc(100% / 3)
+      display: inline-block
+      text-align: center
+      &.current-page
+        .icon-box
+          // .icon
+          //   background-image: url(../images/ic-menu-mobile-active-01.svg) !important
+        span
+          font-weight: bolc
+
+    .icon-box
+      width: 16px
+      height: 16px
+      margin: 0 auto
+    .icon
+      display: inline-block
+      +bgcontain
+    span
+      font-size: 11px
+      line-height: 15px
+      color: #fff
+
++mobile
+  .header
+    background: #FFFFFF
+    // padding: 42px 0 74px
+    // padding: 20px 0 74px
+    padding: 26px 0 74px
+    &__logo
+      position: relative
+      z-index: 2
+      display: none
+      img
+        height: 26px
+    &__menu
+      position: relative
+      z-index: 105
+      ul
+        li
+          a
+            padding: 0 15px !important
+          &.btn-message,
+          &.btn-home,
+          &.btn-notif,
+          &.btn-guide,
+          &.btn-logout
+            .icon
+              width: 20px
+              height: 20px
+          &.btn-notif
+            // // margin-right: 0
+            // border-right: 0
+            // a
+            //   padding-right: 0 !important
+          &.btn-login
+            display: none
+          &.btn-logout
+            border-right: 0 !important
+            // margin-left: 18px
+            // border-left: 1px solid #ccc
+            a
+              padding-right: 0 !important
+    //   position: fixed
+    //   width: 100%
+    //   height: 100%
+    //   top: 0
+    //   left: -100%
+    //   background: #FFFFFF
+    //   padding-top: 110px
+    //   opacity: 0
+    //   transition: all .3s ease-in-out
+    //   ul
+    //     display: block
+    //     padding: 30px 30px
+    //     li
+    //       display: block
+    //       padding: 12px 0
+    //       text-align: left
+    //       a
+    //         display: inline-block
+    //         padding: 0
+    //       &.btn-login
+    //         a
+    //           padding: 11px 34px
+
+    // &__toggle
+    //   width: 23px
+    //   height: 13px
+    //   margin: 10px 15px 10px auto
+    //   position: relative
+    //   z-index: 210
+    //   top: 0
+    //   transition: all .5s ease-in-out
+    //   span
+    //     display: block
+    //     height: 3px
+    //     width: 100%
+    //     border-radius: 1px
+    //     background: #000000
+    //     position: absolute
+    //     left: 0
+    //     border-radius: 2px
+    //     opacity: 1
+    //     transform: none
+    //     transition: all .3s ease-in-out
+    //     &:nth-child(1)
+    //       top: 0
+    //     &:nth-child(2)
+    //       top: 5px
+    //     &:nth-child(3)
+    //       top: 10px
+
+
+    &.sticky
+      padding: 20px 0 65px
+
+    .mobile__floating-menu
+      display: block
+      opacity: 1
+      visibility: visible
+
+    &.static-page
+      padding: 30px 0
+      .header
+        &__logo
+          display: block
+
+
+  body.menu-open
+    overflow: hidden
+    .header
+      padding: 42px 0
+      &__menu
+        opacity: 1
+        left: 0
+      &__toggle
+        transition: all .5s ease-in-out
+        span
+          &:nth-child(1)
+            top: 5px
+            transform: rotate(45deg)
+          &:nth-child(2)
+            top: 5px
+            opacity: 0
+          &:nth-child(3)
+            top: 5px
+            transform: rotate(135deg)
+  .notif-box
+    // right: -19px !important
+    right: 0px !important
+    +mobile
+      top: 105px
+    +responsive(400px, 0)
+      min-width: 300px !important
+      right: -13px !important
+    +responsive(350px, 0)
+      min-width: 300px !important
+      max-width: 300px
+      right: -20px !important
+
+
+body.notif-open
+  &:before
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: #777777
+    opacity: .5
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+  .notif-box
+    opacity: 1
+    visibility: visible
+    // top: 115px
+    top: 90px
+  .header.sticky
+    .notif-box
+      top: 70px
+
+.notif-box
+  padding: 16px 20px
+  border-radius: 10px
+  background: #fff
+  box-shadow: 0px 3px 6px #00000029
+  position: absolute
+  min-width: 352px
+  top: 100px
+  right: -170px
+  opacity: 0
+  visibility: hidden
+  transition: all .5s ease
+  h3
+    font-size: 24px
+    line-height: 29px
+    margin-bottom: 16px
+    font-weight: bold
+  .n-wrapper
+    max-height: 520px
+    overflow: hidden
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 5px
+      background-color: #F9F9F9
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.2)
+      background-color: #F5F5F5
+    &::-webkit-scrollbar-thumb
+      background-color: $primary
+      border: 1px solid #F9F9F9
+  .pertime
+    font-size: 10px
+    line-height: 14px
+    color: #777
+    font-weight: bold
+    margin-bottom: 10px
+    .t-notif
+      color: #DF5055
+  .notif-item
+    padding: 16px 16px 10px 16px
+    border-radius: 10px
+    border: 1px solid #E5E5E5
+    background: #fff
+    display: flex
+    margin-bottom: 10px
+    position: relative
+    .icon
+      width: 44px !important
+      height: 44px !important
+      margin-right: 16px
+      .ic
+        width: 100%
+        height: 100%
+        display: block
+        +bgcontain
+    .box-text
+      margin-top: -5px
+      small
+        font-size: 10px
+        line-height: 14px
+        color: #4C9F70
+      h4
+        font-size: 18px
+        line-height: 20px
+        font-weight: bold
+        margin-bottom: 0
+        max-width: 200px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+      .nopo
+        margin-bottom: 12px
+        display: block
+        font-size: 10px
+        line-height: 14px
+        max-width: 200px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+      .btn-do
+        padding: 7px 22px
+        border-radius: 3px
+        background: #DF5055
+        font-size: 12px
+        line-height: 14px
+        color: #fff !important
+        display: inline-block
+        margin-bottom: 15px
+      .time
+        font-size: 8px
+        line-height: 20px
+    .tag
+      font-size: 8px
+      line-height: 12px
+      padding: 1px 7px
+      border-radius: 3px
+      color: #fff
+      position: absolute
+      top: 9px
+      right: 9px
+      &.new
+        background: #DF5055
+  .clue
+    font-size: 10px
+    line-height: 14px
+    color: #000000
+    text-align: center

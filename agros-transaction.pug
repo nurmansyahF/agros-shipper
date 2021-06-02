@@ -1,0 +1,652 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "dashboard";
+  - var headerText = "SHIPPER";
+
+block header
+  header.header#header(class=headerColor=="white"?"header--white":"")
+    .container
+      a.header__logo(href="dashboard.html")
+        img.img(src="images/logo-agros.png")
+        img.img-alt(src="images/logo-agros-alt.png")
+        span.text= headerText
+      .header__menu
+        ul
+          //- li.btn-message.show-mobile
+          //-   a(href="#")
+          //-     i.icon
+          //-       .ic(style="background-image: url(images/ic-messenger.svg)")
+          li.btn-home.hide-mobile
+            a(href="dashboard.html")
+              i.icon
+                .ic(style="background-image: url(images/ic-home.svg)")
+          li.btn-notif
+            a(href="#")
+              span.icon
+                .ic(style="background-image: url(images/ic-notif.svg)")
+                i.number 3
+            .notif-box
+              //- h3 Notifikasi
+              .n-wrapper
+                .pertime
+                  span Hari ini,
+                  span.t-notif  3 Notifikasi Baru
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-coin.png)")
+                  .box-text
+                    small Agros Transaction
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PO AGR001/02/2020#096
+                    a.btn-do(href="#") Selesaikan Tagihan 1
+                    .time 15 menit yang lalu
+                  .tag.new Baru
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-coin.png)")
+                  .box-text
+                    small Agros Transaction
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PO AGR001/02/2020#096
+                    a.btn-do(href="#") Selesaikan Tagihan 1
+                    .time 15 menit yang lalu
+                  .tag.new Baru
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-coin.png)")
+                  .box-text
+                    small Agros Transaction
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PO AGR001/02/2020#096
+                    a.btn-do(href="#") Selesaikan Tagihan 1
+                    .time 15 menit yang lalu
+                .pertime
+                  span Kemarin,
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                  .box-text
+                    small Agros Messengger
+                    h4 Muatan Terlambat Karena...
+                    span.nopo Mega Admin: Kemarin sebenernya sudah di lanjutkan
+                    .time 1 Hari yang lalu
+                  .tag.msg 12 Pesan
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-envelope.png)")
+                  .box-text
+                    small Agros Messengger
+                    h4 Muatan Terlambat Karena ...
+                    span.nopo Leny Admin: Kemarin sebenernya sudah di lanjutkan
+                    .time 1 Hari yang lalu
+                  .tag.msg 12 Pesan
+                .notif-item
+                  .icon
+                    .ic(style="background-image: url(images/ic-rect-pending.png)")
+                  .box-text
+                    small Muatan Tertunda
+                    h4 DO-AGRS-040221.71
+                    span.nopo NO. PURCHASE ORDER AGR001/02/2020#096
+                    .time 1 Hari yang lalu
+              .clue Scroll kebawah untuk melihat lebih banyak
+          li.btn-guide
+            a(href="#")
+              i.icon
+                .ic(style="background-image: url(images/fi-rr-interrogation.svg)")
+          li.btn-logout.show-mobile
+            a(href="#")
+              i.icon
+                .ic(style="background-image: url(images/fi-rr-power.svg)")
+          li.btn-login
+            a(href="#") LOGOUT
+      .header__toggle
+        span
+        span
+        span
+      .mobile__floating-menu
+        ul
+          li(class=activepage =="dashboard"? "current-page":"")
+            a(href="dashboard.html")
+              .icon-box
+                .icon(style=activepage =="dashboard"? "background-image: url(images/ic-menu-mobile-active-01.svg)":"background-image: url(images/ic-menu-mobile-01.svg)")
+              span Home
+
+          li(class=activepage =="order"? "current-page":"")
+            a(href="#")
+              .icon-box
+                .icon(style=activepage =="order"? "background-image: url(images/ic-menu-mobile-active-02.svg)":"background-image: url(images/ic-menu-mobile-02.svg)")
+              span Order
+          li(class=activepage =="muatan"? "current-page":"")
+            a(href="#")
+              .icon-box
+                .icon(style=activepage =="muatan"? "background-image: url(images/ic-menu-mobile-active-03.svg)":"background-image: url(images/ic-menu-mobile-03.svg)")
+              span Muatan
+
+block content
+
+  .loading-page
+    .loading-page__wrap
+      .loading-page__logo
+        .icon
+          img(src="images/logo-icon.png")
+        .text
+          img(src="images/logo-text.png")
+    span.foot-text PT ANTAR GLOBAL PROSPERO
+  .block-dashboard
+    section.inner-header
+      .container
+        .row
+          .col-lg-7.animate.animate--up
+            a.arrow.mobile(href="dashboard.html")
+            h1 Agros <span>Transaction</span>
+          .col-lg-5.animate.animate--up
+            .search
+              form
+                .form-group
+                  input.form-control(type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ...")
+    section.your-do.transaction-payment
+      .container
+        .your-do__head.a-transaction.animate.animate--up
+          .row
+            .col-lg-12
+              h3 Hari ini,
+        .your-do__do-det.animate.animate--
+          a.boxlink(href="#")
+          .row
+            .col-lg-6
+              .box-po.animate
+                span.small-title Nomor Delivery Order
+                h3 DO-AGRS-040221.71
+                .no-po NO. PURCHASE ORDER AGR001/02/2020#096
+                .row
+                  .col-lg-6
+                    .box-text
+                      p Batubara
+                      small Nama Barang
+                  .col-lg-6
+                    .box-text
+                      p 35 TON
+                      small Tonase / Kubikasi
+            .col-lg-3
+              .box-card.invoice.red
+                a.boxlink(href="#")
+                .icon
+                  .ic(style="background-image: url(images/ic-invoice-dp-red.png)")
+                h4 <b>Tagihan 1</b>
+                .text
+                  p Klik disini untuk menyelesaikan<br> tagihan Anda.
+                .total
+                  span RP. 1.567.000
+                  small Sisa waktu <b>02:00:00</b>
+            .col-lg-3
+              .box-card.invoice
+                a.boxlink(href="#")
+                .icon
+                  .ic(style="background-image: url(images/ic-invoice-dp.png)")
+                h4 <b>Tagihan 2</b>
+                .text
+                  p Segera selesaikan tagihan<br> muat Anda.
+                .total
+                  span RP. 1.567.000
+                  small Sisa waktu <b>02:00:00</b>
+          a.ext-link(href="#" target="_blank")
+        .your-do__do-det.animate.animate--up#anno-1
+          a.boxlink(href="#")
+          .row
+            .col-lg-6
+              .box-po
+                span.small-title Nomor Delivery Order
+                h3 DO-AGRS-040221.71
+                .no-po NO. PURCHASE ORDER AGR001/02/2020#096
+                .row
+                  .col-lg-6
+                    .box-text
+                      p Batubara
+                      small Nama Barang
+                  .col-lg-6
+                    .box-text
+                      p 35 TON
+                      small Tonase / Kubikasi
+            .col-lg-3
+              .box-card.invoice.green
+                a.boxlink(href="#")
+                .icon
+                  .ic(style="background-image: url(images/ic-invoice-dp-green.png)")
+                h4 <b>Tagihan 1</b>
+                .text
+                  p Klik disini untuk menyelesaikan tagihan Anda.
+                .total
+                  span RP. 1.567.000
+                  small Sisa waktu <b>02:00:00</b>
+            .col-lg-3
+              .box-card.invoice.red
+                a.boxlink(href="#")
+                .icon
+                  .ic(style="background-image: url(images/ic-invoice-dp.png)")
+                h4 <b>Tagihan 2</b>
+                .text
+                  p Segera selesaikan tagihan muat Anda.
+                .total
+                  span RP. 1.567.000
+                  small Sisa waktu <b>02:00:00</b>
+          a.ext-link(href="#" target="_blank")
+        .your-do__do-det
+          a.boxlink(href="#")
+          .row
+            .col-lg-6
+              .box-po.animate
+                span.small-title Nomor Delivery Order
+                h3 DO-AGRS-040221.71
+                .no-po NO. PURCHASE ORDER AGR001/02/2020#096
+                .row
+                  .col-lg-6
+                    .box-text
+                      p Batubara
+                      small Nama Barang
+                  .col-lg-6
+                    .box-text
+                      p 35 TON
+                      small Tonase / Kubikasi
+            .col-lg-3
+              .box-card.invoice.blink
+                a.boxlink(href="#")
+                .icon
+                  .ic(style="background-image: url(images/ic-invoice-dp-red1.png)")
+                h4 <b>Tagihan 1</b>
+                .text
+                  p Klik disini untuk menyelesaikan tagihan Anda.
+                .total
+                  span RP. 1.567.000
+                  small Sisa waktu <b>02:00:00</b>
+                //- <audio controls loop autoplay>
+                //-   <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3" type="audio/ogg">
+                //-   span Your browser does not support the audio element.
+                //- </audio>
+            .col-lg-3
+              .box-card.invoice
+                a.boxlink(href="#")
+                .icon
+                  .ic(style="background-image: url(images/ic-invoice-dp.png)")
+                h4 <b>Tagihan 2</b>
+                .text
+                  p Segera selesaikan tagihan muat Anda.
+                .total
+                  span RP. 1.567.000
+                  small Sisa waktu <b>02:00:00</b>
+          a.ext-link(href="#" target="_blank")
+
+    section.transacation-payment-list
+      .container
+        .your-do__head.a-transaction.animate.animate--up
+          .row
+            .col-lg-12
+              h3 Sudah terbayar,
+        .payment-list-wrap#anno-2
+          ul
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li.animate.animate--up
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+            li
+              .row
+                .col-lg-4
+                  span.title NO. DELIVERY ORDER
+                  h4.bold DO-AGRS-040221.71
+                  span.sub-bott NO. PURCHASE ORDER AGR001/02/2020#096
+                .col-lg-2
+                  span.title NAMA BARANG
+                  h4.bold GIPSUM
+                  span.sub-bott 36,54 M<sup>3</sup>
+                .col-lg-2
+                  span.title KOTA MUAT
+                  h4.bold TUBAN
+                  span.sub-bott 22/12/2020
+                .col-lg-2
+                  span.title KOTA BONGKAR
+                  h4.bold PASURUAN
+                  span.sub-bott 22/13/2020
+                .col-lg-2
+                  span.title STATUS
+                  h4.bold.paid LUNAS
+                    i.ic.ic-paid
+                  span.sub-bott 22/13/2020
+              a.ext-link(href="#" target="_blank")
+        .row.animate.animate--up
+          .col-lg-6
+            .pagination-wrap.left
+              .text
+                p Jumlah Purchase Order per halaman
+              .perpage
+                ul.pagination
+                  li
+                    a(href="#") 5
+                  li.active
+                    span 10
+          .col-lg-6
+            .pagination-wrap.animate.animate--up
+              u Halaman
+              ul.pagination
+                li.active
+                  span 1
+                li
+                  a(href="#") 2
+                li
+                  a(href="#") 3
+                li
+                  a(href="#") 4
+                li
+                  a(href="#") 5
+
+                li.before
+                  a(href="#")
+                    .ic-arrow
+                li.after
+                  a(href="#")
+                    .ic-arrow
+    section.agros-service
+      .container
+        .section__head.animate.animate--up
+          h2 Layanan Agros
+          p Your Truly Logistics Solutions, Agros selalu memberi kemudahan dan kenyamanan untuk Anda.
+          .link-seemore
+            a(href="#") Homepage Kami
+        .service__slider.animate.animate--up
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item(style="background-image: url(images/hero-home.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS SHOP
+              p Saat terjebak di jalan karena ada gangguan atau kerusakan, armada Agros yang tersebar di seluruh Indonesia akan kami sambungkan dengan bengkel Anda.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS TRANSPORTER
+              p Tidak ada yang tidak mungkin. Kini, Perusahaan bisa dengan cepat mendapatkan keuntungan tanpa harus melakukan hal berat.
+
+              a.link(href="#") Kunjungi laman
+
+block addscript
+  script.
+    var w = $(window).width();
+    if (w > 760) {
+      var pos1 = 'center-right',
+          pos2 = 'center-left',
+          pos3 = 'right',
+          pos4 = 'bottom',
+          pos5 = 'center-top',
+          cn6 =  'annoNotif top-left';
+    }else{
+      var pos1 = 'center-bottom',
+          pos2 = 'center-top',
+          pos3 = 'center-bottom',
+          pos4 = 'center-bottom',
+          pos5 = 'center-bottom',
+          cn6 =  'annoNotif mobile';
+    }
+    var tour = new Anno([
+      {
+        target: '#anno-1',
+        position: pos5,
+        className: 'annoNotif',
+        content: "<h4><img src='images/ic-idr-nobox.svg'>Status Transaksi</h4><p>Tagihan Anda akan muncul disini.<br> <b style='color:#DF5055;';>Merah</b> adalah tanda Anda harus membayarnya dan Hijau berarti sudah melunasinya.</p>",
+        buttons: {
+          text:'Lanjut',
+        }
+      },{
+        target: '#anno-2',
+        position: 'center-top',
+        className: cn6,
+        content: "<h4><img src='images/ic-idr-nobox.svg'>Sudah Terbayar</h4><p>Berikut ini adalah kumpulan bukti bahwa Anda telah membayar.</p>",
+        buttons: {
+          text:'Mengerti',
+        },
+        onHide: function () {
+          $('body').removeClass('no-scroll');
+          $('html, body').animate({
+            scrollTop: 0
+          }, 300)
+        }
+      }
+    ])
+    $('[id*="anno-"]').each(function(){
+      $(this).addClass('animate--in');
+    })
+    setTimeout(function() {
+      tour.show()
+    }, 4850);
+    $(window).resize(function() {
+      tour.hide();
+      setTimeout(function() {
+        tour.show();
+      }, 800);
+    })
+
+    $('.btn-guide').each(function(){
+      $(this).click(function(){
+        tour.show();
+      })
+    })

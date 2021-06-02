@@ -1,0 +1,239 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "dashboard";
+  - var headerText = "SHIPPER";
+
+block content
+
+  .loading-page
+    .loading-page__wrap
+      .loading-page__logo
+        .icon
+          img(src="images/logo-icon.png")
+        .text
+          img(src="images/logo-text.png")
+    span.foot-text PT ANTAR GLOBAL PROSPERO
+
+  .block-dashboard
+    section.inner-header
+      .container
+        .row
+          .col-lg-7.animate.animate--up
+            a.arrow.mobile(href="dashboard.html")
+            h1 Agros <span>Messenger</span>
+          .col-lg-5.animate.animate--up
+            .search
+              form
+                .form-group
+                  input.form-control(type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ...")
+    section.po-and-features
+      .container
+        .row
+          .col-lg-3
+            .box-card.gradient-green.animate.animate--up(style="background-image: url(images/box-bg-pattern-green.png)")
+              .icon
+                .ic(style="background-image: url(images/ic-rect-envelope.png)")
+              h4 <b>Buat Pesan Baru</b>
+              .text
+                p Interaksi eksklusif <b>1-ON-1</b> bersama Agros Sales / Admin sesuai dengan Office Hours.
+              .link-seemore
+                a(href="#") <b>MON - FRI</b> 09.00 - 17.00
+          .col-lg-3
+            .box-card.atrans.blink.animate.animate--up
+              .icon
+                .ic(style="background-image: url(images/ic-rect-coin.png)")
+                .floating-number 3
+              h4 <b>Agros</b> Transaction
+              .text
+                p Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda.
+              .link-seemore
+                a(href="#") Lihat Tagihan Anda
+          .col-lg-6
+            .poa__slider.animate.animate--up
+              .slider-item
+                .box-card.row
+                  .col-md-6
+                    .icon
+                      .ic(style="background-image: url(images/ic-rect-message.png)")
+                    h4 <b>Kritik atau Saran?</b>
+                    .text
+                      p Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.
+                    .link-seemore
+                      a(href="#") <b>Masukan Kritik atau Saran</b>
+                  .col-md-6
+                    img(src="images/img-login.png", alt="img")
+              .slider-item
+                .box-card.row
+                  .col-md-6
+                    .icon
+                      .ic(style="background-image: url(images/ic-rect-message.png)")
+                    h4 <b>Kritik atau Saran?</b>
+                    .text
+                      p Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.
+                    .link-seemore
+                      a(href="#") <b>Masukan Kritik atau Saran</b>
+                  .col-md-6
+                    img(src="images/img-login.png", alt="img")
+
+    section.messages-list
+      .container
+        .today
+          .your-do__head.a-transaction.animate.animate--up
+            .row
+              .col-lg-12
+                h3 Hari ini,
+          .list-wrap
+            ul
+              li
+                a(href="#")
+                  .box
+                    .row
+                      .col-md-4
+                        .icon
+                        .box-text
+                          span.title FROM
+                          h4.bold AGROS INDONESIA
+                          span.sub-bott PT. Antar Global Prospero
+                      .col-md-4
+                        span.title SUBJECT
+                        h4.bold Muaatan terlambat ?
+                        span.sub-bott 22/12/2020
+                      .col-md-4
+                        span.title CONTENT
+                        .text
+                          p Mbak, seharusnya muatannya sampai tadi siang tapi kok sekarang belum ...
+                .floating-numb
+                  span 3
+        .yesterday
+          .your-do__head.a-transaction.animate.animate--up
+            .row
+              .col-lg-12
+                h3 Kemarin,
+          .list-wrap
+            ul
+              li
+                a(href="#")
+                  .box
+                    .row
+                      .col-md-4
+                        .icon
+                        .box-text
+                          span.title FROM
+                          h4.bold AGROS INDONESIA
+                          span.sub-bott PT. Antar Global Prospero
+                      .col-md-4
+                        span.title SUBJECT
+                        h4.bold Muaatan terlambat ?
+                        span.sub-bott 22/12/2020
+                      .col-md-4
+                        span.title CONTENT
+                        .text
+                          p Mbak, seharusnya muatannya sampai tadi siang tapi kok sekarang belum ...
+              li
+                a(href="#")
+                  .box
+                    .row
+                      .col-md-4
+                        .icon
+                        .box-text
+                          span.title FROM
+                          h4.bold AGROS INDONESIA
+                          span.sub-bott PT. Antar Global Prospero
+                      .col-md-4
+                        span.title SUBJECT
+                        h4.bold Muaatan terlambat ?
+                        span.sub-bott 22/12/2020
+                      .col-md-4
+                        span.title CONTENT
+                        .text
+                          p Mbak, seharusnya muatannya sampai tadi siang tapi kok sekarang belum ...
+              li
+                a(href="#")
+                  .box
+                    .row
+                      .col-md-4
+                        .icon
+                        .box-text
+                          span.title FROM
+                          h4.bold AGROS INDONESIA
+                          span.sub-bott PT. Antar Global Prospero
+                      .col-md-4
+                        span.title SUBJECT
+                        h4.bold Muaatan terlambat ?
+                        span.sub-bott 22/12/2020
+                      .col-md-4
+                        span.title CONTENT
+                        .text
+                          p Mbak, seharusnya muatannya sampai tadi siang tapi kok sekarang belum ...
+              li
+                a(href="#")
+                  .box
+                    .row
+                      .col-md-4
+                        .icon
+                        .box-text
+                          span.title FROM
+                          h4.bold AGROS INDONESIA
+                          span.sub-bott PT. Antar Global Prospero
+                      .col-md-4
+                        span.title SUBJECT
+                        h4.bold Muaatan terlambat ?
+                        span.sub-bott 22/12/2020
+                      .col-md-4
+                        span.title CONTENT
+                        .text
+                          p Mbak, seharusnya muatannya sampai tadi siang tapi kok sekarang belum ...
+              li
+                a(href="#")
+                  .box
+                    .row
+                      .col-md-4
+                        .icon
+                        .box-text
+                          span.title FROM
+                          h4.bold AGROS INDONESIA
+                          span.sub-bott PT. Antar Global Prospero
+                      .col-md-4
+                        span.title SUBJECT
+                        h4.bold Muaatan terlambat ?
+                        span.sub-bott 22/12/2020
+                      .col-md-4
+                        span.title CONTENT
+                        .text
+                          p Mbak, seharusnya muatannya sampai tadi siang tapi kok sekarang belum ...
+
+
+
+    section.agros-service
+      .container
+        .section__head.animate.animate--up
+          h2 Layanan Agros
+          p Your Truly Logistics Solutions, Agros selalu memberi kemudahan dan kenyamanan untuk Anda.
+          .link-seemore
+            a(href="#") Homepage Kami
+        .service__slider.animate.animate--up
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item(style="background-image: url(images/hero-home.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS SHOP
+              p Saat terjebak di jalan karena ada gangguan atau kerusakan, armada Agros yang tersebar di seluruh Indonesia akan kami sambungkan dengan bengkel Anda.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS TRANSPORTER
+              p Tidak ada yang tidak mungkin. Kini, Perusahaan bisa dengan cepat mendapatkan keuntungan tanpa harus melakukan hal berat.
+
+              a.link(href="#") Kunjungi laman

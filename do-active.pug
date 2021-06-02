@@ -1,0 +1,473 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "muatan";
+  - var headerText = "SHIPPER";
+
+block content
+
+  .loading-page
+    .loading-page__wrap
+      .loading-page__logo
+        .icon
+          img(src="images/logo-icon.png")
+        .text
+          img(src="images/logo-text.png")
+    span.foot-text PT ANTAR GLOBAL PROSPERO
+  .block-dashboard
+    section.inner-header
+      .container
+        .row
+          .col-lg-7.animate.animate--up
+            a.arrow.mobile(href="dashboard.html")
+            h1 Delivery Order Aktif
+          .col-lg-5.animate.animate--up
+            .search
+              form
+                .form-group
+                  input.form-control(type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ...")
+        .breadcrubms.animate.animate--up
+          u NAVIGATION :
+          a(href="#") Homepage
+          a(href="#") Dashboard
+          a(href="#") PO Aktif
+          span RINGKASAN PURCHASE ORDER
+    section.your-do
+      .container
+        .your-do__do-det.do-active.animate.animate--up
+          .row
+            .col-lg-6
+              .box-po.animate.animate--up
+                span.small-title Nomor Purchase Order
+                h3 AGR001/02/2020#096
+                .progress-bar
+                  .pb
+                    .pb-block
+                      span(style="width: 20%")
+                    .prcntg 20%
+                  small Prosentase pengiriman muatan Anda.
+                .row
+                  .col-lg-6
+                    .box-text.animate.animate--up
+                      p Batubara
+                      small Nama Barang
+                  .col-lg-6
+                    .box-text.animate.animate--up
+                      p 20.000 TON
+                      small Tonase / Kubikasi
+            .col-lg-3
+              .box-card.light-green.animate.animate--up
+                .icon.hide-mobile
+                  .ic(style="background-image: url(images/ic-rect-do-active.png)")
+                h4 <b>DO</b> Aktif
+                .text
+                  p Delivery order yang sedang dalam pengiriman.
+                .total
+                  span 400
+                .link-seemore
+                  a(href="#") Lihat lebih lanjut
+            .col-lg-3
+              .box-card.cream.animate.animate--up
+                .icon.hide-mobile
+                  .ic(style="background-image: url(images/ic-rect-do-sisa.png)")
+                h4 <b>DO</b> Sisa
+                .text
+                  p Delivery order yang sedang kami proses.
+                .total
+                  span 200
+                .link-seemore
+                  a(href="#") Lihat lebih lanjut
+          a.ext-link(href="#" target="_blank")
+
+    section.po-and-features
+      .container
+        .row
+          .col-lg-2
+            .box-card.small.sent.bg-white.animate.animate--up
+              .icon
+                .ic(style="background-image: url(images/ic-rect-check-send.png)")
+              h4 <b>Terkirim</b>
+              .text
+                p Muatan Anda telah terbongkar di tujuan.
+              .total
+                span 369
+              .link-seemore
+                a(href="#") Lihat lebih lanjut
+          .col-lg-2
+            .box-card.small.send.bg-white.animate.animate--up
+              .icon
+                .ic(style="background-image: url(images/ic-rect-sent.png)")
+              h4 <b>Dikirim</b>
+              .text
+                p Muatan Anda sedang dalam perjalanan.
+              .total
+                span 200
+              .link-seemore
+                a(href="#") Lihat lebih lanjut
+          .col-lg-2
+            .box-card.small.bg-white.pending.animate.animate--up
+              .icon
+                .ic(style="background-image: url(images/ic-rect-pending.png)")
+              h4 <b>Tertunda</b>
+              .text
+                p Muatan Anda mengalami keterlambatan.
+              .total
+                span 4
+              .link-seemore
+                a(href="#") Lihat lebih lanjut
+          .col-lg-6
+            .poa__slider.animate.animate--up
+              .slider-item
+                .box-card.row
+                  .col-md-6
+                    .icon
+                      .ic(style="background-image: url(images/ic-rect-message.png)")
+                    h4 <b>Kritik atau Saran?</b>
+                    .text
+                      p Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.
+                    .link-seemore
+                      a(href="#") <b>Masukan Kritik atau Saran</b>
+                  .col-md-6
+                    img(src="images/img-login.png", alt="img")
+              .slider-item
+                .box-card.row
+                  .col-md-6
+                    .icon
+                      .ic(style="background-image: url(images/ic-rect-message.png)")
+                    h4 <b>Kritik atau Saran?</b>
+                    .text
+                      p Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyaman Anda.
+                    .link-seemore
+                      a(href="#") <b>Masukan Kritik atau Saran</b>
+                  .col-md-6
+                    img(src="images/img-login.png", alt="img")
+
+    section.po-history
+      .container
+        .po-history__list
+          ul
+            li.sent.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span TERKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.send.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-sent.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span DIKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.send.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-sent.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span DIKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.send.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-sent.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span DIKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.sent.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span TERKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.send.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-sent.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span DIKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.send.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-sent.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span DIKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.sent.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span TERKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.sent.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-check-green.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span TERKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+            li.send.animate.animate--up
+              a(href="#")
+                .icon-box
+                  .icon(style="background-image: url(images/ic-rect-sent.png)")
+                .box-det
+                  .po-numb
+                    span DO-AGRS-040221.79
+                    small 22/12/2020
+                  .prdct-name
+                    span GIPSUM
+                    small 20.000 TON
+                  .load
+                    span TUBAN
+                    small 22/12/2020
+                  .unload
+                    span DIKIRIM
+                    small 23/12/2020
+                .box-det.mobile
+                  .po-numb
+                    span DO-AGRS-040221.71
+                  .bottom
+                    span.date 22/12/2020
+                    span.loadun Tuban - Gresik
+                    span.weight 35 TON
+                .arrow
+                  .ic-arrow
+
+        .row
+          .col-lg-6
+            .pagination-wrap.left
+              .text
+                p Jumlah Purchase Order per halaman
+              .perpage
+                ul.pagination
+                  li.active
+                    span 5
+                  li
+                    a(href="#") 10
+          .col-lg-6
+            .pagination-wrap.animate.animate--up
+              u Halaman
+              ul.pagination
+                li.active
+                  span 1
+                li
+                  a(href="#") 2
+                li
+                  a(href="#") 3
+                li
+                  a(href="#") 4
+                li
+                  a(href="#") 5
+
+                li.before
+                  a(href="#")
+                    .ic-arrow
+                li.after
+                  a(href="#")
+                    .ic-arrow
+    section.agros-service
+      .container
+        .section__head.animate.animate--up
+          h2 Layanan Agros
+          p Your Truly Logistics Solutions, Agros selalu memberi kemudahan dan kenyamanan untuk Anda.
+          .link-seemore
+            a(href="#") Homepage Kami
+        .service__slider.animate.animate--up
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item(style="background-image: url(images/hero-home.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS SHOP
+              p Saat terjebak di jalan karena ada gangguan atau kerusakan, armada Agros yang tersebar di seluruh Indonesia akan kami sambungkan dengan bengkel Anda.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS TRANSPORTER
+              p Tidak ada yang tidak mungkin. Kini, Perusahaan bisa dengan cepat mendapatkan keuntungan tanpa harus melakukan hal berat.
+
+              a.link(href="#") Kunjungi laman

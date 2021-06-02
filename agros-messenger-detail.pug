@@ -1,0 +1,116 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "dashboard";
+  - var headerText = "SHIPPER";
+
+block content
+
+  .loading-page
+    .loading-page__wrap
+      .loading-page__logo
+        .icon
+          img(src="images/logo-icon.png")
+        .text
+          img(src="images/logo-text.png")
+    span.foot-text PT ANTAR GLOBAL PROSPERO
+
+  .block-dashboard
+    section.inner-header
+      .container
+        .row
+          .col-lg-7.animate.animate--up
+            a.arrow.mobile(href="dashboard.html")
+            h1 Agros <span>Messenger</span>
+          .col-lg-5.animate.animate--up
+            .search
+              form
+                .form-group
+                  input.form-control(type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ...")
+    section.messanger-detail
+      .container
+        .head-date 22/12/2020
+        .box-messanger
+          .bm-header
+            form(action="#")
+              .row
+                .col-md-2
+                  span TICKET
+                  .form-group
+                    input.form-control.small(type="text" disabled placeholder="Tiket" value="#123456")
+                  //- b #123456
+                  //- small 22/12/2020
+                .col-md-2
+                  span DATE
+                  .form-group
+                    input.form-control.small(type="text" disabled placeholder="Tanggal" value="20/02/2021")
+                  //- b Muatan terlambat?
+                  //- small 22/12/2020
+                .col-md-6
+                  .titlebox
+                    span Title
+                    .form-group
+                      input.form-control.small(type="text" placeholder="Judul")
+                      button.btn(type="submit")
+          .wrapper-chat
+            .chat.admin
+              .pp
+                img(src="images/ic-rounded-agros.png", alt="photo-profile")
+              .text
+                p Halo, selamat pagi agros apakah ada kendala dari <br>muatan saya? saya pagi tadi menerima notifikasi WA ... <br>dan saya ingin memastikan untuk informasi lanjutan.
+                .time 12:33
+            .chat.their
+              .pp
+                img(src="images/box-bg-pattern-red.png", alt="photo-profile")
+              .text
+                p Halo, selamat pagi agros apakah ada kendala dari <br>muatan saya? saya pagi tadi menerima notifikasi WA ... <br>dan saya ingin memastikan untuk informasi lanjutan.
+                .time 12:33
+            .chat.admin
+              .pp
+                img(src="images/ic-rounded-agros.png", alt="photo-profile")
+              .text
+                p Halo, selamat pagi agros apakah ada kendala dari <br>muatan saya? saya pagi tadi menerima notifikasi WA ... <br>dan saya ingin memastikan untuk informasi lanjutan.
+                .time 12:33
+          .write-chat
+            form(action="#")
+              textarea.form-control(name="chat",  rows="10", placeholder="Tulis balasan anda")
+            .button-wrapper
+              .row
+                .col
+                  a.add(href="#")
+                .col
+                  a.send(href="#") Kirim
+                    i.ic
+
+    section.agros-service
+      .container
+        .section__head.animate.animate--up
+          h2 Layanan Agros
+          p Your Truly Logistics Solutions, Agros selalu memberi kemudahan dan kenyamanan untuk Anda.
+          .link-seemore
+            a(href="#") Homepage Kami
+        .service__slider.animate.animate--up
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item(style="background-image: url(images/hero-home.jpg)")
+            .content
+              h4 AGROS DRIVER
+              p Agros menawarkan keleluasaan untuk memilih proyek sehingga peningkatan pendapatan bukan lagi jadi impian.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS SHOP
+              p Saat terjebak di jalan karena ada gangguan atau kerusakan, armada Agros yang tersebar di seluruh Indonesia akan kami sambungkan dengan bengkel Anda.
+
+              a.link(href="#") Kunjungi laman
+          .slider-item.dark(style="background-image: url(images/hero-driver.jpg)")
+            .content
+              h4 AGROS TRANSPORTER
+              p Tidak ada yang tidak mungkin. Kini, Perusahaan bisa dengan cepat mendapatkan keuntungan tanpa harus melakukan hal berat.
+
+              a.link(href="#") Kunjungi laman
