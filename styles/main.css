@@ -513,6 +513,14 @@ body.load-page #wrap { background: #f8f8f8; }
 
 .block-dashboard .box-card.bg-white { background-color: #fff !important; }
 
+.block-dashboard .box-card.atrans.blinked { background-color: #fcebef; }
+
+.block-dashboard .box-card.atrans.blinked .icon .ic { background-image: url(../images/ic-rect-coin-red.svg) !important; background-size: contain; }
+
+.block-dashboard .box-card.atrans.blinked .link-seemore a, .block-dashboard .box-card.atrans.blinked .link-seemore span { color: #df5055; }
+
+.block-dashboard .box-card.atrans.blinked .link-seemore a:after, .block-dashboard .box-card.atrans.blinked .link-seemore span:after { background-color: #df5055; }
+
 .block-dashboard .box-po { padding-right: 41px; position: relative; }
 
 .block-dashboard .box-po .small-title { font-size: 12px; line-height: 22px; color: #777; margin-bottom: 12px; display: block; }
@@ -878,11 +886,11 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 .header__menu ul > li.btn-message a:hover, .header__menu ul > li.btn-home a:hover, .header__menu ul > li.btn-notif a:hover, .header__menu ul > li.btn-guide a:hover, .header__menu ul > li.btn-logout a:hover { opacity: 1; }
 
-.header__menu ul > li.btn-message .icon, .header__menu ul > li.btn-home .icon, .header__menu ul > li.btn-notif .icon, .header__menu ul > li.btn-guide .icon, .header__menu ul > li.btn-logout .icon { width: 25px; height: 25px; display: inline-block; vertical-align: middle; position: relative; }
+.header__menu ul > li.btn-message a > .icon, .header__menu ul > li.btn-home a > .icon, .header__menu ul > li.btn-notif a > .icon, .header__menu ul > li.btn-guide a > .icon, .header__menu ul > li.btn-logout a > .icon { width: 25px; height: 25px; display: inline-block; vertical-align: middle; position: relative; transition: all .3s linear; }
 
-.header__menu ul > li.btn-message .icon .ic, .header__menu ul > li.btn-home .icon .ic, .header__menu ul > li.btn-notif .icon .ic, .header__menu ul > li.btn-guide .icon .ic, .header__menu ul > li.btn-logout .icon .ic { width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; max-width: 25px; max-height: 25px; }
+.header__menu ul > li.btn-message a > .icon .ic, .header__menu ul > li.btn-home a > .icon .ic, .header__menu ul > li.btn-notif a > .icon .ic, .header__menu ul > li.btn-guide a > .icon .ic, .header__menu ul > li.btn-logout a > .icon .ic { width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; }
 
-.header__menu ul > li.btn-message .icon .number, .header__menu ul > li.btn-home .icon .number, .header__menu ul > li.btn-notif .icon .number, .header__menu ul > li.btn-guide .icon .number, .header__menu ul > li.btn-logout .icon .number { width: 15px; text-align: center; font-size: 10px; line-height: 15px; color: #fff; display: inline-block; letter-spacing: 0.25px; background: #DF5055; border-radius: 3px; position: absolute; top: -6px; right: -6px; font-style: normal; }
+.header__menu ul > li.btn-message a > .icon .number, .header__menu ul > li.btn-home a > .icon .number, .header__menu ul > li.btn-notif a > .icon .number, .header__menu ul > li.btn-guide a > .icon .number, .header__menu ul > li.btn-logout a > .icon .number { width: 15px; text-align: center; font-size: 10px; line-height: 15px; color: #fff; display: inline-block; letter-spacing: 0.25px; background: #DF5055; border-radius: 3px; position: absolute; top: -6px; right: -6px; font-style: normal; }
 
 .header__menu ul > li.btn-login a { color: #FFF; font-family: "Druk Wide", sans-serif; font-weight: 600; border-radius: 5px; background: #4C9F70 linear-gradient(180deg, #6bbb71 0%, #017961 100%) 0% 0% no-repeat padding-box; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); }
 
@@ -912,9 +920,11 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 .header__menu ul > li.btn-notif:hover { opacity: 1; }
 
-.header__menu ul > li.btn-notif:hover .icon { opacity: 1; }
+.header__menu ul > li.btn-notif:hover a > .icon { opacity: 1; }
 
-.header__menu ul > li.btn-notif:hover .icon .ic { opacity: 1; background-image: url(../images/ic-notif-active.svg) !important; max-width: 25px; max-height: 25px; }
+.header__menu ul > li.btn-notif:hover a > .icon .ic { opacity: 1; background-image: url(../images/ic-notif-active.svg) !important; max-width: 25px; max-height: 25px; }
+
+.header__menu ul > li.btn-guide { border-right: 0; }
 
 .header__menu ul > li.btn-guide:hover { opacity: 1; }
 
@@ -994,17 +1004,17 @@ body.notif-open .notif-box { opacity: 1; visibility: visible; top: 90px; }
 
 body.notif-open .header.sticky .notif-box { top: 70px; }
 
-.notif-box { padding: 16px 20px; border-radius: 10px; background: #fff; box-shadow: 0px 3px 6px #00000029; position: absolute; min-width: 352px; top: 100px; right: -170px; opacity: 0; visibility: hidden; transition: all .5s ease; }
+.notif-box { border-radius: 10px; background: #fff; box-shadow: 0px 3px 6px #00000029; position: absolute; min-width: 352px; top: 100px; right: -170px; opacity: 0; visibility: hidden; transition: all .5s ease; overflow: hidden; }
 
 .notif-box h3 { font-size: 24px; line-height: 29px; margin-bottom: 16px; font-weight: bold; }
 
-.notif-box .n-wrapper { max-height: 520px; overflow: hidden; overflow-y: auto; }
+.notif-box .n-wrapper { padding: 16px 20px; max-height: 520px; overflow: hidden; overflow-y: auto; border-radius: 6px; }
 
-.notif-box .n-wrapper::-webkit-scrollbar { width: 5px; background-color: #F9F9F9; }
+.notif-box .n-wrapper::-webkit-scrollbar { width: 3px; background-color: #F9F9F9; border-radius: 3px; }
 
 .notif-box .n-wrapper::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2); background-color: #F5F5F5; }
 
-.notif-box .n-wrapper::-webkit-scrollbar-thumb { background-color: #4C9F70; border: 1px solid #F9F9F9; }
+.notif-box .n-wrapper::-webkit-scrollbar-thumb { background-color: #4C9F70; border: 0; border-radius: 3px; }
 
 .notif-box .pertime { font-size: 10px; line-height: 14px; color: #777; font-weight: bold; margin-bottom: 10px; }
 
@@ -1032,7 +1042,7 @@ body.notif-open .header.sticky .notif-box { top: 70px; }
 
 .notif-box .notif-item .tag.new { background: #DF5055; }
 
-.notif-box .clue { font-size: 10px; line-height: 14px; color: #000000; text-align: center; }
+.notif-box .clue { font-size: 10px; line-height: 14px; color: #000000; text-align: center; margin-bottom: 16px; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* Footer */
