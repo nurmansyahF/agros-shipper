@@ -977,6 +977,7 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
   .header__menu ul li a { padding: 0 15px !important; }
   .header__menu ul li.btn-message .icon, .header__menu ul li.btn-home .icon, .header__menu ul li.btn-notif .icon, .header__menu ul li.btn-guide .icon, .header__menu ul li.btn-logout .icon { width: 20px; height: 20px; }
   .header__menu ul li.btn-login { display: none; }
+  .header__menu ul li.btn-guide { border-right: 1px solid #CACACA; }
   .header__menu ul li.btn-logout { border-right: 0 !important; }
   .header__menu ul li.btn-logout a { padding-right: 0 !important; }
   .header.sticky { padding: 20px 0 65px; }
@@ -990,13 +991,13 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
   body.menu-open .header__toggle span:nth-child(1) { top: 5px; transform: rotate(45deg); }
   body.menu-open .header__toggle span:nth-child(2) { top: 5px; opacity: 0; }
   body.menu-open .header__toggle span:nth-child(3) { top: 5px; transform: rotate(135deg); }
-  .notif-box { right: 0px !important; } }
+  .notif-box { right: -165% !important; } }
 
 @media (max-width: 767px) and (max-width: 767px) { .notif-box { top: 105px; } }
 
-@media (max-width: 767px) and (max-width: 400px) { .notif-box { min-width: 300px !important; right: -13px !important; } }
+@media (max-width: 767px) and (max-width: 400px) { .notif-box { min-width: 300px !important; right: -110px !important; } }
 
-@media (max-width: 767px) and (max-width: 350px) { .notif-box { min-width: 300px !important; max-width: 300px; right: -20px !important; } }
+@media (max-width: 767px) and (max-width: 350px) { .notif-box { min-width: 300px !important; max-width: 300px; right: -118px !important; } }
 
 body.notif-open:before { content: ""; width: 100%; height: 100vh; background: #777777; opacity: .5; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 11; }
 
