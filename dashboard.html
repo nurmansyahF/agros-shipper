@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="stylesheet" href="styles/plugins.css"/>
     <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css"/>
-    <link rel="stylesheet" href="styles/main.css?v=318"/>
+    <link rel="stylesheet" href="styles/main.css?v=321"/>
   </head>
   <body>
     <div id="wrap">
@@ -989,12 +989,12 @@
       setTimeout(function() {
         tour.show();
       }, 4800);
-      $(window).resize(function() {
-        tour.hide();
-        setTimeout(function() {
-          tour.show();
-        }, 800);
-      })
+      //- $(window).resize(function() {
+      //-   tour.hide();
+      //-   setTimeout(function() {
+      //-     tour.show();
+      //-   }, 800);
+      //- })
       
       $('.btn-guide').each(function(){
         $(this).click(function(){
