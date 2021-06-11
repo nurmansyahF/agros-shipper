@@ -919,7 +919,7 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 .header__logo .text { display: block; position: absolute; color: #000000; font-size: 12px; line-height: 18px; text-transform: uppercase; bottom: 2px; left: calc(100% + 0.5rem); }
 
-.header__menu { display: block; margin-left: auto; }
+.header__menu { display: block; margin-left: auto; position: relative; }
 
 .header__menu ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 100%; }
 
@@ -940,6 +940,8 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 .header__menu ul > li.btn-message a > .icon .ic, .header__menu ul > li.btn-home a > .icon .ic, .header__menu ul > li.btn-notif a > .icon .ic, .header__menu ul > li.btn-guide a > .icon .ic, .header__menu ul > li.btn-logout a > .icon .ic { width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; }
 
 .header__menu ul > li.btn-message a > .icon .number, .header__menu ul > li.btn-home a > .icon .number, .header__menu ul > li.btn-notif a > .icon .number, .header__menu ul > li.btn-guide a > .icon .number, .header__menu ul > li.btn-logout a > .icon .number { width: 15px; text-align: center; font-size: 10px; line-height: 15px; color: #fff; display: inline-block; letter-spacing: 0.25px; background: #DF5055; border-radius: 3px; position: absolute; top: -6px; right: -6px; font-style: normal; }
+
+.header__menu ul > li.btn-notif { position: initial; }
 
 .header__menu ul > li.btn-login a { color: #FFF; font-family: "Druk Wide", sans-serif; font-weight: 600; border-radius: 5px; background: #4C9F70 linear-gradient(180deg, #6bbb71 0%, #017961 100%) 0% 0% no-repeat padding-box; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); }
 
@@ -1025,6 +1027,7 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
   .header__menu { position: relative; z-index: 105; }
   .header__menu ul li a { padding: 0 15px !important; }
   .header__menu ul li.btn-message .icon, .header__menu ul li.btn-home .icon, .header__menu ul li.btn-notif .icon, .header__menu ul li.btn-guide .icon, .header__menu ul li.btn-logout .icon { width: 20px; height: 20px; }
+  .header__menu ul li.btn-notif { position: initial; }
   .header__menu ul li.btn-login { display: none; }
   .header__menu ul li.btn-guide { border-right: 1px solid #CACACA; }
   .header__menu ul li.btn-logout { border-right: 0 !important; }
@@ -1042,7 +1045,7 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
   body.menu-open .header__toggle span:nth-child(3) { top: 5px; -webkit-transform: rotate(135deg); transform: rotate(135deg); }
   .notif-box { right: -165% !important; } }
 
-@media (max-width: 767px) and (max-width: 767px) { .notif-box { top: 105px; } }
+@media (max-width: 767px) and (max-width: 767px) { .notif-box { position: fixed !important; max-width: 300px; top: 105px; } }
 
 @media (max-width: 767px) and (max-width: 400px) { .notif-box { min-width: 300px !important; right: -110px !important; } }
 
@@ -1050,23 +1053,15 @@ textarea.form-control { min-height: 239px; height: auto; resize: none; padding: 
 
 body.notif-open:before { content: ""; width: 100%; height: 100vh; background: #777777; opacity: .5; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 11; }
 
-body.notif-open .notif-box { opacity: 1; visibility: visible; top: 100px; right: -110px !important; }
+body.notif-open .notif-box { opacity: 1; visibility: visible; top: 115px; }
 
-@media (max-width: 450px) { body.notif-open .notif-box { right: -98px !important; } }
+@media (max-width: 767px) { body.notif-open .notif-box { top: 130px; right: 0px !important; left: 0; margin: 0 auto; } }
 
-@media (max-width: 380px) { body.notif-open .notif-box { right: -108px !important; } }
+body.notif-open .header.sticky .notif-box { top: 60px; }
 
-@media (max-width: 350px) { body.notif-open .notif-box { right: -118px !important; } }
+@media (max-width: 767px) { body.notif-open .header.sticky .notif-box { top: 110px; } }
 
-body.notif-open .header.sticky .notif-box { top: 90px; }
-
-@media (max-width: 450px) { body.notif-open .header.sticky .notif-box { right: -98px !important; } }
-
-@media (max-width: 380px) { body.notif-open .header.sticky .notif-box { right: -98px !important; } }
-
-@media (max-width: 350px) { body.notif-open .header.sticky .notif-box { right: -108px !important; } }
-
-.notif-box { border-radius: 10px; background: #fff; box-shadow: 0px 3px 6px #00000029; position: absolute; min-width: 352px; top: 100px; right: -170px; opacity: 0; visibility: hidden; transition: all .5s ease; overflow: hidden; }
+.notif-box { border-radius: 10px; background: #fff; box-shadow: 0px 3px 6px #00000029; position: absolute; min-width: 352px; top: 100px; right: 0px; opacity: 0; visibility: hidden; transition: all .5s ease; overflow: hidden; }
 
 .notif-box h3 { font-size: 24px; line-height: 29px; margin-bottom: 16px; font-weight: bold; }
 
@@ -1084,11 +1079,11 @@ body.notif-open .header.sticky .notif-box { top: 90px; }
 
 .notif-box .notif-item { padding: 16px 16px 10px 16px; border-radius: 10px; border: 1px solid #E5E5E5; background: #fff; display: -webkit-flex; display: -ms-flexbox; display: flex; margin-bottom: 10px; position: relative; }
 
-.notif-box .notif-item .icon { width: 44px !important; height: 44px !important; margin-right: 16px; }
+.notif-box .notif-item .icon { width: 44px !important; height: 44px !important; margin-right: 16px; -webkit-flex: 0 0 44px; -ms-flex: 0 0 44px; flex: 0 0 44px; max-width: 44px; }
 
 .notif-box .notif-item .icon .ic { width: 100%; height: 100%; display: block; background-size: contain; background-position: center; background-repeat: no-repeat; width: 100%; height: 100%; }
 
-.notif-box .notif-item .box-text { margin-top: -5px; }
+.notif-box .notif-item .box-text { margin-top: -5px; -webkit-flex: 0 0 calc(100% - 60px); -ms-flex: 0 0 calc(100% - 60px); flex: 0 0 calc(100% - 60px); max-width: calc(100% - 60px); }
 
 .notif-box .notif-item .box-text small { font-size: 10px; line-height: 14px; color: #4C9F70; }
 
