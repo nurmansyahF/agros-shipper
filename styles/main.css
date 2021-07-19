@@ -783,7 +783,9 @@ body.load-page #wrap { background: #f8f8f8; }
 
 .box-long .text p { font-size: 10px; line-height: 14px; color: #777777; }
 
-.box-long.red h3 { color: #FF7680; }
+.box-long.red { background-color: #DF5055; }
+
+.box-long.red h3 { color: #FFF; }
 
 .box-long .icon { width: 30px; height: 30px; -webkit-flex: 0 0 30px; -ms-flex: 0 0 30px; flex: 0 0 30px; max-width: 30px; }
 
