@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="fi-rr-info" transform="translate(0 0)">
+    <path id="Path_3482" data-name="Path 3482" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Z" fill="#fff"/>
+    <path id="Path_3483" data-name="Path 3483" d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" fill="#fff"/>
+    <circle id="Ellipse_1346" data-name="Ellipse 1346" cx="1.5" cy="1.5" r="1.5" transform="translate(10.5 5)" fill="#fff"/>
+  </g>
+</svg>

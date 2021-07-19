@@ -15,16 +15,15 @@
   </head>
   <body>
     <div id="wrap">
-      <header class="header static-page" id="header">
+      <header class="header" id="header">
         <div class="container"><a class="header__logo" href="dashboard.html"><img class="img" src="images/logo-agros.png"/><img class="img-alt" src="images/logo-agros-alt.png"/><span class="text">SHIPPER</span></a>
           <div class="header__menu">
             <ul>
-              <li class="btn-home"><a href="dashboard.html"><i class="icon">
+              <li class="btn-home hide-mobile"><a href="dashboard.html"><i class="icon">
                     <div class="ic" style="background-image: url(images/ic-home.svg)"></div></i></a></li>
               <li class="btn-notif"><a href="#"><span class="icon">
                     <div class="ic" style="background-image: url(images/ic-notif.svg)"></div><i class="number">3</i></span></a>
                 <div class="notif-box">
-                  <h3>Notifikasi</h3>
                   <div class="n-wrapper">
                     <div class="pertime"><span>Hari ini,</span><span class="t-notif"> 3 Notifikasi Baru</span></div>
                     <div class="notif-item">
@@ -90,13 +89,15 @@
                   <div class="clue">Scroll kebawah untuk melihat lebih banyak</div>
                 </div>
               </li>
+              <li class="btn-logout show-mobile"><a href="#"><i class="icon">
+                    <div class="ic" style="background-image: url(images/fi-rr-power.svg)"></div></i></a></li>
               <li class="btn-login"><a href="#">LOGOUT</a></li>
             </ul>
           </div>
           <div class="header__toggle"><span></span><span></span><span></span></div>
           <div class="mobile__floating-menu">
             <ul>
-              <li><a href="home.html">
+              <li><a href="dashboard.html">
                   <div class="icon-box">
                     <div class="icon" style="background-image: url(images/ic-menu-mobile-01.svg)"></div>
                   </div><span>Home</span></a></li>
@@ -113,33 +114,107 @@
         </div>
       </header>
       <main>
-        <div class="loading-page">
-          <div class="loading-page__wrap">
-            <div class="loading-page__logo">
-              <div class="icon"><img src="images/logo-icon.png"/></div>
-              <div class="text"><img src="images/logo-text.png"/></div>
-            </div>
-          </div><span class="foot-text">PT ANTAR GLOBAL PROSPERO</span>
-        </div>
-        <div class="block-dashboard bill-page" style="background-image: url(images/bg-bubble-green-medium.png)">
-          <div class="container">
-            <div class="box-white">
-              <div class="top">
-                <div class="logo-midtrans"><img src="images/logo-midtrans.png" alt="logo-midtrans"/></div>
-                <div class="icon" style="background-image: url(images/ic-redirect-bill.png)"></div>
-                <div class="no-po">NO PO AGR001/02/2020#096</div>
-                <h1>Purchase Order Terkirim!</h1>
-                <p>Silahkan selesaikan transaksi, sehingga muatan segera kami proses.</p>
+        <div class="block-dashboard">
+          <section class="inner-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7 animate animate--up"><a class="arrow mobile" href="dashboard.html"></a>
+                  <h1>Agros Wallet</h1>
+                </div>
+                <div class="col-lg-5 animate animate--up">
+                  <div class="search">
+                    <form>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Ketik Nomor Purchase Order / Delivery Order ..."/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <div class="bottom">
-                <div class="show-notif"><span>Lihat Notifikasi</span>
-                  <div class="link-seemore"><a href="#"><b>Agros</b> Transaction</a></div>
+              <div class="breadcrubms animate animate--up">
+                <u>NAVIGATION :</u><a href="#">Dashboard</a><span>Pengaturan</span>
+              </div>
+            </div>
+          </section>
+          <section class="pengaturan">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box-wallet animate animate--up">
+                    <div class="box-wallet-top">
+                      <div class="logos">
+                        <div class="logo-awall"><img src="images/logo-agros-w.png" alt="logo"/></div>
+                        <div class="verified"><img src="images/logo-sampoerna.png" alt="logo"/></div>
+                      </div>
+                      <div class="nominal"><span>RP 1.567.980</span></div>
+                      <div class="admin-name"><span>Admin : Pramono</span></div>
+                    </div>
+                    <div class="box-wallet-btm">
+                      <div class="wallet-menu"><a class="btn-wallet" href="#">
+                          <div class="icon"><img class="svg" src="images/ic-menu-wallet.svg" alt="ic"/></div><span>Riwayat Saldo</span></a><a class="btn-wallet" href="#">
+                          <div class="icon"><img class="svg" src="images/ic-wallet-02.svg" alt="ic"/></div><span>Tambah Saldo</span></a><a class="btn-wallet" href="#">
+                          <div class="icon"><img class="svg" src="images/ic-wallet-03.svg" alt="ic"/></div><span>Tarik Saldo</span></a><a class="btn-wallet" href="#">
+                          <div class="icon"><img class="svg" src="images/ic-wallet-04.svg" alt="ic"/></div><span>Info Rekening</span></a></div><span class="note">Agros Wallet akan memudahkan Anda dalam bertransaksi.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="pengaturan-headbar">
+                    <div class="left"><a class="btn-white" href="#">Kembali</a></div>
+                    <div class="right"><a class="btn-white" href="#">Simpan</a></div>
+                  </div>
+                  <div class="pengaturan-form">
+                    <form action="#">
+                      <div class="form-group">
+                        <label>Nama Bank</label>
+                        <input class="form-control" type="text" value="Pramono"/>
+                      </div>
+                      <div class="form-group with-check">
+                        <label>Nomor Rekening</label>
+                        <input class="form-control" type="text" value="14000 7869 6758"/><a class="btn btn-green" href="#">Periksa</a>
+                      </div>
+                      <div class="form-group">
+                        <label>Atas Nama</label>
+                        <input class="form-control" type="text" value="PT ANTAR GLOBAL PROSPERO"/>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="pengaturan-form">
+                    <form action="#">
+                      <div class="form-group with-check">
+                        <label>Masukan Kata Sandi Lama</label>
+                        <input class="form-control" type="password" value="password"/><a class="btn btn-green" href="#">Periksa</a>
+                      </div><span class="note">Demi kenyaman pengguna, Anda dapat mengubah kata sandi sesuai dengan keinginan Anda.</span>
+                      <div class="form-group">
+                        <label>Masukan Kata Sandi Baru</label>
+                        <input class="form-control" type="password" value="Gresik"/>
+                      </div>
+                      <div class="form-group">
+                        <label>Masukan Ulang Kata Sandi Baru</label>
+                        <input class="form-control" type="password" value="Gresik"/>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </main>
+      <footer class="footer" id="footer">
+        <div class="footer-main animate animate--up">
+          <div class="container"></div>
+        </div>
+        <div class="footer-bot">
+          <div class="container">
+            <div class="footer-bot__left">
+              <div class="footer-bot__logo"><img src="images/logo-agros-w.png"/></div><span class="line"></span>
+              <div class="copy">PT ANTAR GLOBAL PROSPERO &copy; 2021. All rights reserved.</div>
+            </div>
+            <div class="footer-bot__right"><a href="#">SYARAT & KETENTUAN</a><a href="#">KEBIJAKAN PRIVASI</a></div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="plugins/jquery/jquery-3.4.1.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
