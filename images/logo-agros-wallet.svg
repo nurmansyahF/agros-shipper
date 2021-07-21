@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="93" height="24" viewBox="0 0 93 24">
+  <g id="Group_9624" data-name="Group 9624" transform="translate(-171 -290)">
+    <g id="Rectangle_999" data-name="Rectangle 999" transform="translate(171 290)" fill="none" stroke="#fff" stroke-width="1">
+      <rect width="93" height="24" rx="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="92" height="23" rx="4.5" fill="none"/>
+    </g>
+    <text id="Agros_Wallet" data-name="Agros Wallet" transform="translate(195.87 306.02)" fill="#fff" font-size="10" font-family="Inter-Bold, Inter" font-weight="700" letter-spacing="0.015em"><tspan x="0" y="0">Agros</tspan><tspan y="0" font-family="Inter-Regular, Inter" font-weight="400"> </tspan><tspan y="0" font-family="Inter-Light, Inter" font-weight="300">Wallet</tspan></text>
+    <path id="Path_4620" data-name="Path 4620" d="M753.61,648.359h-3.848l2.721,2.719a.253.253,0,0,1,.015.341c-.117.14-.24.275-.369.4s-.263.251-.4.368a.253.253,0,0,1-.342-.014l-2.721-2.721v3.849a.253.253,0,0,1-.231.252q-.27.025-.546.025t-.544-.024a.253.253,0,0,1-.231-.251v-3.849l-2.722,2.722a.25.25,0,0,1-.336.019q-.185-.154-.357-.323c-.035-.033-.068-.067-.1-.1q-.168-.172-.322-.357a.25.25,0,0,1,.018-.336l2.721-2.72h-3.848a.253.253,0,0,1-.252-.231q-.025-.27-.025-.546t.025-.546a.253.253,0,0,1,.252-.232h3.848l-2.721-2.721a.253.253,0,0,1-.015-.341q.174-.21.368-.4c.129-.129.264-.252.4-.369a.253.253,0,0,1,.341.014l2.721,2.721v-3.848a.253.253,0,0,1,.231-.252q.269-.025.544-.024t.546.024a.253.253,0,0,1,.231.252v3.848l2.721-2.72a.253.253,0,0,1,.341-.014q.21.175.4.368t.368.4a.254.254,0,0,1-.014.342l-2.72,2.72h3.848a.253.253,0,0,1,.252.232q.025.27.025.546t-.025.546A.253.253,0,0,1,753.61,648.359Z" transform="translate(-563.925 -345.562)" fill="#fff"/>
+  </g>
+</svg>

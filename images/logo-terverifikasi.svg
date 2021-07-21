@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89.938" height="23.151" viewBox="0 0 89.938 23.151">
+  <g id="Group_9586" data-name="Group 9586" transform="translate(-360.062 -290)">
+    <text id="Terverifikasi" transform="translate(391 306)" fill="#fff" font-size="10" font-family="Inter-Regular, Inter" letter-spacing="0.01em"><tspan x="0" y="0">Terverifikasi</tspan></text>
+    <g id="check" transform="translate(360.062 290)">
+      <path id="Path_9" data-name="Path 9" d="M24.335,24.013,21.58,20.954l.431-4.094-4.028-.853-2.055-3.57-3.761,1.681L8.406,12.437l-2.054,3.57-4.028.853.431,4.094L0,24.013l2.755,3.059-.431,4.094,4.028.853,2.054,3.569,3.761-1.681,3.761,1.681,2.055-3.57,4.028-.853-.431-4.094ZM17.27,21.349l-6.11,6.841L6.916,23.948l1.01-1.01L11.1,26.113,16.2,20.4Z" transform="translate(0 -12.437)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
